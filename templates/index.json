@@ -1,0 +1,261 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "rh_home_hero_PxPpAU": {
+      "type": "rh-home-hero",
+      "blocks": {
+        "info_card_rTnDpr": {
+          "type": "info_card",
+          "settings": {
+            "icon_image": "shopify://shop_images/streaming1.png",
+            "title": "1052 Courses",
+            "description": "Choose your favorite from our collection of bestselling and 5 star rated courses."
+          }
+        },
+        "info_card_NrADph": {
+          "type": "info_card",
+          "settings": {
+            "icon_image": "shopify://shop_images/student1.png",
+            "title": "2.5 million students",
+            "description": "You're in good company - We've taught more than 2.5 million paying students!"
+          }
+        },
+        "info_card_THN7aY": {
+          "type": "info_card",
+          "settings": {
+            "icon_image": "shopify://shop_images/star1_1c2d5726-0648-4e79-b60c-e4c445be0731.png",
+            "title": "Top Rated",
+            "description": "Our courses are rated 4.7 out of 5 stars over more than 1,000,000 reviews."
+          }
+        }
+      },
+      "block_order": [
+        "info_card_rTnDpr",
+        "info_card_NrADph",
+        "info_card_THN7aY"
+      ],
+      "name": "Home Hero Section",
+      "settings": {
+        "hero_title": "Learn to code. Boost your career.",
+        "hero_description": "Gain the skills top tech companies demand. Learn to code, build real projects, and launch the career you've always dreamed of.",
+        "hero_image": "shopify://shop_images/hero-image.png",
+        "hero_background_image": "shopify://shop_images/hero-bg.png",
+        "button_text": "Explore E-Learning",
+        "button_link": "",
+        "section_padding_top": 10,
+        "section_padding_bottom": 10,
+        "section_padding_horizontal": 10,
+        "hero_padding_top": 55,
+        "hero_padding_horizontal": 10,
+        "left_text_padding_bottom": 150,
+        "title_font_size": 56,
+        "title_margin_bottom": 36,
+        "description_font_size": 20,
+        "description_margin_bottom": 36,
+        "button_padding_vertical": 20,
+        "button_padding_horizontal": 20,
+        "button_max_width": 240,
+        "button_font_size": 20,
+        "button_border_radius": 10,
+        "info_cards_padding_vertical": 28,
+        "info_cards_padding_horizontal": 32,
+        "info_cards_border_radius": 8,
+        "info_cards_margin_top": 90,
+        "info_title_font_size": 26,
+        "info_description_font_size": 16,
+        "background_color": "#ffffff",
+        "title_color": "#ffffff",
+        "description_color": "#ffffff",
+        "button_background_color": "#ffffff",
+        "button_text_color": "#282828",
+        "button_hover_background_color": "#f0f0f0",
+        "button_hover_text_color": "#000000",
+        "info_cards_background_color": "#ffffff",
+        "info_title_color": "#272727",
+        "info_description_color": "#272727cc"
+      }
+    },
+    "rh_goals_section_bDWhRT": {
+      "type": "rh-goals-section",
+      "blocks": {
+        "category_izBHMm": {
+          "type": "category",
+          "settings": {
+            "category_name": "Frontend"
+          }
+        },
+        "category_A7w7Dw": {
+          "type": "category",
+          "settings": {
+            "category_name": "Backend"
+          }
+        },
+        "category_GPQHpN": {
+          "type": "category",
+          "settings": {
+            "category_name": "Databases"
+          }
+        },
+        "category_LDr7QR": {
+          "type": "category",
+          "settings": {
+            "category_name": "Data Analytics"
+          }
+        },
+        "category_ACPDGJ": {
+          "type": "category",
+          "settings": {
+            "category_name": "Mobile Apps"
+          }
+        },
+        "goal_card_JH7CPg": {
+          "type": "goal_card",
+          "settings": {
+            "card_image": "shopify://shop_images/shopware-original.png",
+            "card_text": ""
+          }
+        },
+        "goal_card_PDPUAf": {
+          "type": "goal_card",
+          "settings": {
+            "card_image": "shopify://shop_images/swift-original.png",
+            "card_text": ""
+          }
+        },
+        "goal_card_L3FNUJ": {
+          "type": "goal_card",
+          "settings": {
+            "card_image": "shopify://shop_images/gitlab-original-wordmark.png",
+            "card_text": ""
+          }
+        },
+        "goal_card_MikWLi": {
+          "type": "goal_card",
+          "settings": {
+            "card_image": "shopify://shop_images/html5-plain-wordmark.png",
+            "card_text": ""
+          }
+        },
+        "goal_card_nHDrTe": {
+          "type": "goal_card",
+          "settings": {
+            "card_image": "shopify://shop_images/safari-original.png",
+            "card_text": ""
+          }
+        },
+        "goal_card_twU6XG": {
+          "type": "goal_card",
+          "settings": {
+            "card_image": "shopify://shop_images/vscode-original.png",
+            "card_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "category_izBHMm",
+        "category_A7w7Dw",
+        "category_GPQHpN",
+        "category_LDr7QR",
+        "category_ACPDGJ",
+        "goal_card_JH7CPg",
+        "goal_card_PDPUAf",
+        "goal_card_L3FNUJ",
+        "goal_card_MikWLi",
+        "goal_card_nHDrTe",
+        "goal_card_twU6XG"
+      ],
+      "name": "Goals Section",
+      "settings": {
+        "section_title": "Your Goals, Our Topics",
+        "section_padding_top": 90,
+        "section_padding_bottom": 50,
+        "section_padding_horizontal": 20,
+        "header_margin_bottom": 60,
+        "title_font_size": 50,
+        "title_margin_bottom": 24,
+        "categories_gap": 16,
+        "category_font_size": 20,
+        "separator_font_size": 18,
+        "cards_gap": 24,
+        "card_width": 195,
+        "card_height": 185,
+        "card_border_radius": 8,
+        "icon_size": 80,
+        "icon_margin_bottom": 8,
+        "card_text_font_size": 14,
+        "background_color": "#ffffff",
+        "title_color": "#272727",
+        "category_color": "#272727cc",
+        "category_hover_color": "#007bff",
+        "separator_color": "#272727",
+        "card_background_color": "#e6faf1",
+        "card_hover_background_color": "#ffffff",
+        "card_hover_border_color": "#e9ecef",
+        "card_text_color": "#272727"
+      }
+    },
+    "rh_home_courses_bMjNCn": {
+      "type": "rh-home-courses",
+      "name": "Home Courses Section",
+      "settings": {
+        "section_title": "Learning Paths and Courses",
+        "section_description": "Created with passion for more than 2,500,000 students",
+        "product_source": "collection",
+        "collection": "all-courses",
+        "specific_products": [
+          "basic-financial-literacy",
+          "beginning-python",
+          "digital-marketing-fundamentals",
+          "content-writing"
+        ],
+        "products_limit": 8,
+        "default_description": "Learn essential skills and advance your career with our comprehensive courses.",
+        "default_duration": "05 Hour 45 Min",
+        "section_padding_top": 50,
+        "section_padding_bottom": 100,
+        "section_padding_horizontal": 20,
+        "header_gap": 16,
+        "header_margin_bottom": 45,
+        "title_font_size": 50,
+        "description_font_size": 20,
+        "cards_gap": 24,
+        "card_padding": 10,
+        "card_border_radius": 10,
+        "content_gap": 24,
+        "text_content_gap": 18,
+        "image_height": 160,
+        "image_margin_bottom": 24,
+        "image_border_radius": 6,
+        "image_bottom_border": 6,
+        "card_title_font_size": 18,
+        "card_description_font_size": 12,
+        "duration_text_font_size": 14,
+        "duration_icon_size": 16,
+        "duration_icon_gap": 8,
+        "background_color": "#ffffff",
+        "title_color": "#272727",
+        "description_color": "#272727",
+        "card_background_color": "#ffffff",
+        "card_border_color": "#e7f0ea",
+        "card_hover_border_color": "#05ce78",
+        "card_title_color": "#292828",
+        "card_description_color": "#292828cc",
+        "duration_text_color": "#05ce78",
+        "image_bottom_border_color": "#05ce78"
+      }
+    }
+  },
+  "order": [
+    "rh_home_hero_PxPpAU",
+    "rh_goals_section_bDWhRT",
+    "rh_home_courses_bMjNCn"
+  ]
+}

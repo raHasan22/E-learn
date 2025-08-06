@@ -1,0 +1,631 @@
+{% style %}
+    .rh-company-goals-section{
+    padding: {{ section.settings.section_padding_top }}px {{ section.settings.section_padding_horizontal }}px {{ section.settings.section_padding_bottom }}px;
+    background-color: {{ section.settings.background_color }};
+}
+.rh-company-goals-section .container_rh{
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Goals Header */
+.rh-company-goals-section .rh-goals-header {
+    text-align: center;
+    margin-bottom: {{ section.settings.header_margin_bottom }}px;
+}
+
+.rh-company-goals-section .goals-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: {{ section.settings.title_font_size }}px;
+    line-height: 120%;
+    color: {{ section.settings.title_color }};
+    margin: 0 0 {{ section.settings.title_margin_bottom }}px;
+}
+
+.rh-company-goals-section .goals-categories {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: {{ section.settings.categories_gap }}px;
+    flex-wrap: wrap;
+}
+
+.rh-company-goals-section .category-item {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: {{ section.settings.category_font_size }}px;
+    line-height: 140%;
+    color: {{ section.settings.category_color }};
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.rh-company-goals-section .category-item:hover {
+    color: {{ section.settings.category_hover_color }};
+}
+
+.rh-company-goals-section .category-separator {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: {{ section.settings.separator_font_size }}px;
+    color: {{ section.settings.separator_color }};
+    opacity: 0.6;
+}
+
+/* Goals Cards */
+.rh-company-goals-section .rh-goals-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: {{ section.settings.cards_gap }}px;
+    flex-wrap: wrap;
+}
+
+.rh-company-goals-section .goal-card {
+    width: {{ section.settings.card_width }}px;
+    height: {{ section.settings.card_height }}px;
+    background: {{ section.settings.card_background_color }};
+    border-radius: {{ section.settings.card_border_radius }}px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    border: 1px solid transparent;
+}
+
+.rh-company-goals-section .goal-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    background: {{ section.settings.card_hover_background_color }};
+    border: 1px solid {{ section.settings.card_hover_border_color }};
+}
+
+.rh-company-goals-section .goal-card .card-icon {
+    width: {{ section.settings.icon_size }}px;
+    height: {{ section.settings.icon_size }}px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: {{ section.settings.icon_margin_bottom }}px;
+}
+
+.rh-company-goals-section .goal-card .card-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.rh-company-goals-section .goal-card .card-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: {{ section.settings.card_text_font_size }}px;
+    line-height: 140%;
+    color: {{ section.settings.card_text_color }};
+    text-align: center;
+}
+
+/* Company Goals Section Responsive */
+@media screen and (max-width: 1366px) {
+    .rh-company-goals-section {
+        padding: calc({{ section.settings.section_padding_top }}px * 0.8) {{ section.settings.section_padding_horizontal }}px calc({{ section.settings.section_padding_bottom }}px * 0.8);
+    }
+    
+    .rh-company-goals-section .goals-title {
+        font-size: calc({{ section.settings.title_font_size }}px * 0.88);
+    }
+    
+    .rh-company-goals-section .category-item {
+        font-size: calc({{ section.settings.category_font_size }}px * 0.9);
+    }
+    
+    .rh-company-goals-section .goal-card {
+        width: calc({{ section.settings.card_width }}px * 0.89);
+        height: calc({{ section.settings.card_height }}px * 0.89);
+    }
+    
+    .rh-company-goals-section .goal-card .card-icon {
+        width: calc({{ section.settings.icon_size }}px * 0.875);
+        height: calc({{ section.settings.icon_size }}px * 0.875);
+    }
+}
+
+@media screen and (max-width: 1023px) {
+    .rh-company-goals-section {
+        padding: calc({{ section.settings.section_padding_top }}px * 0.6) {{ section.settings.section_padding_horizontal }}px calc({{ section.settings.section_padding_bottom }}px * 0.6);
+    }
+    
+    .rh-company-goals-section .goals-title {
+        font-size: calc({{ section.settings.title_font_size }}px * 0.76);
+        margin: 0 0 calc({{ section.settings.title_margin_bottom }}px * 0.83);
+    }
+    
+    .rh-company-goals-section .goals-categories {
+        gap: calc({{ section.settings.categories_gap }}px * 0.75);
+    }
+    
+    .rh-company-goals-section .category-item {
+        font-size: calc({{ section.settings.category_font_size }}px * 0.85);
+    }
+    
+    .rh-company-goals-section .rh-goals-cards {
+        gap: calc({{ section.settings.cards_gap }}px * 0.83);
+    }
+    
+    .rh-company-goals-section .goal-card {
+        width: calc({{ section.settings.card_width }}px * 0.78);
+        height: calc({{ section.settings.card_height }}px * 0.78);
+    }
+    
+    .rh-company-goals-section .goal-card .card-icon {
+        width: calc({{ section.settings.icon_size }}px * 0.75);
+        height: calc({{ section.settings.icon_size }}px * 0.75);
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .rh-company-goals-section {
+        padding: calc({{ section.settings.section_padding_top }}px * 0.4) 16px calc({{ section.settings.section_padding_bottom }}px * 0.4);
+    }
+    
+    .rh-company-goals-section .rh-goals-header {
+        margin-bottom: calc({{ section.settings.header_margin_bottom }}px * 0.67);
+    }
+    
+    .rh-company-goals-section .goals-title {
+        font-size: calc({{ section.settings.title_font_size }}px * 0.6);
+        margin: 0 0 calc({{ section.settings.title_margin_bottom }}px * 0.67);
+    }
+    
+    .rh-company-goals-section .goals-categories {
+        gap: calc({{ section.settings.categories_gap }}px * 0.5);
+        flex-wrap: wrap;
+    }
+    
+    .rh-company-goals-section .category-item {
+        font-size: calc({{ section.settings.category_font_size }}px * 0.75);
+    }
+    
+    .rh-company-goals-section .category-separator {
+        font-size: calc({{ section.settings.separator_font_size }}px * 0.83);
+    }
+    
+    .rh-company-goals-section .rh-goals-cards {
+        gap: calc({{ section.settings.cards_gap }}px * 0.67);
+    }
+    
+    .rh-company-goals-section .goal-card {
+        width: calc({{ section.settings.card_width }}px * 0.73);
+        height: calc({{ section.settings.card_height }}px * 0.73);
+    }
+    
+    .rh-company-goals-section .goal-card .card-icon {
+        width: calc({{ section.settings.icon_size }}px * 0.625);
+        height: calc({{ section.settings.icon_size }}px * 0.625);
+        margin-bottom: calc({{ section.settings.icon_margin_bottom }}px * 0.75);
+    }
+    
+    .rh-company-goals-section .goal-card .card-text {
+        font-size: calc({{ section.settings.card_text_font_size }}px * 0.86);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .rh-company-goals-section .rh-goals-header {
+        margin-bottom: calc({{ section.settings.header_margin_bottom }}px * 0.5);
+    }
+    
+    .rh-company-goals-section .goals-title {
+        font-size: calc({{ section.settings.title_font_size }}px * 0.52);
+    }
+    
+    .rh-company-goals-section .category-item {
+        font-size: calc({{ section.settings.category_font_size }}px * 0.7);
+    }
+    
+    .rh-company-goals-section .rh-goals-cards {
+        gap: calc({{ section.settings.cards_gap }}px * 0.5);
+    }
+    
+    .rh-company-goals-section .goal-card {
+        width: calc({{ section.settings.card_width }}px * 0.625);
+        height: calc({{ section.settings.card_height }}px * 0.625);
+    }
+    
+    .rh-company-goals-section .goal-card .card-icon {
+        width: calc({{ section.settings.icon_size }}px * 0.525);
+        height: calc({{ section.settings.icon_size }}px * 0.525);
+    }
+    
+    .rh-company-goals-section .goal-card .card-text {
+        font-size: calc({{ section.settings.card_text_font_size }}px * 0.79);
+    }
+}
+
+{% endstyle %}
+
+<div class="rh-company-goals-section">
+    <div class="container_rh">
+      <div class="rh-goals-header">
+        <h2 class="goals-title">{{ section.settings.section_title }}</h2>
+        <div class="goals-categories">
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'category' %}
+                <span class="category-item">{{ block.settings.category_name }}</span>
+                {% unless forloop.last %}
+                  <span class="category-separator">|</span>
+                {% endunless %}
+            {% endcase %}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="rh-goals-cards">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'goal_card' %}
+              <div class="goal-card" {{ block.shopify_attributes }}>
+                <div class="card-icon">
+                  {% if block.settings.card_image %}
+                    {{ block.settings.card_image | image_url: width: 80 | image_tag: alt: block.settings.card_image.alt, loading: 'lazy' }}
+                  {% else %}
+                    <img src="https://dummyimage.com/80x80/cccccc/ffffff&text=Card" alt="Card placeholder" />
+                  {% endif %}
+                </div>
+                {% if block.settings.card_text %}
+                  <div class="card-text">{{ block.settings.card_text }}</div>
+                {% endif %}
+              </div>
+          {% endcase %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+{% schema %}
+{
+  "name": "RH Goals Section",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Content"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Your Goals, Our Topics"
+    },
+    {
+      "type": "header",
+      "content": "Section Spacing"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "min": 20,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "Section Top Padding",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "min": 20,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "Section Bottom Padding",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "section_padding_horizontal",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Section Horizontal Padding",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Header Styling"
+    },
+    {
+      "type": "range",
+      "id": "header_margin_bottom",
+      "min": 20,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "label": "Header Bottom Margin",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "title_font_size",
+      "min": 24,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "Title Font Size",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "title_margin_bottom",
+      "min": 10,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Title Bottom Margin",
+      "default": 24
+    },
+    {
+      "type": "header",
+      "content": "Categories Styling"
+    },
+    {
+      "type": "range",
+      "id": "categories_gap",
+      "min": 8,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Categories Gap",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "category_font_size",
+      "min": 14,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "label": "Category Font Size",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "separator_font_size",
+      "min": 12,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "label": "Separator Font Size",
+      "default": 18
+    },
+    {
+      "type": "header",
+      "content": "Cards Styling"
+    },
+    {
+      "type": "range",
+      "id": "cards_gap",
+      "min": 12,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Cards Gap",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "card_width",
+      "min": 100,
+      "max": 300,
+      "step": 5,
+      "unit": "px",
+      "label": "Card Width",
+      "default": 195
+    },
+    {
+      "type": "range",
+      "id": "card_height",
+      "min": 100,
+      "max": 300,
+      "step": 5,
+      "unit": "px",
+      "label": "Card Height",
+      "default": 185
+    },
+    {
+      "type": "range",
+      "id": "card_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Card Border Radius",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "min": 30,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "label": "Icon Size",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "icon_margin_bottom",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Icon Bottom Margin",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "card_text_font_size",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Card Text Font Size",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Section Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#272727"
+    },
+    {
+      "type": "color",
+      "id": "category_color",
+      "label": "Category Color",
+      "default": "#272727CC"
+    },
+    {
+      "type": "color",
+      "id": "category_hover_color",
+      "label": "Category Hover Color",
+      "default": "#007bff"
+    },
+    {
+      "type": "color",
+      "id": "separator_color",
+      "label": "Separator Color",
+      "default": "#272727"
+    },
+    {
+      "type": "color",
+      "id": "card_background_color",
+      "label": "Card Background Color",
+      "default": "#E6FAF1"
+    },
+    {
+      "type": "color",
+      "id": "card_hover_background_color",
+      "label": "Card Hover Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "card_hover_border_color",
+      "label": "Card Hover Border Color",
+      "default": "#e9ecef"
+    },
+    {
+      "type": "color",
+      "id": "card_text_color",
+      "label": "Card Text Color",
+      "default": "#272727"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category",
+      "name": "Category",
+      "settings": [
+        {
+          "type": "text",
+          "id": "category_name",
+          "label": "Category Name",
+          "default": "Frontend"
+        }
+      ]
+    },
+    {
+      "type": "goal_card",
+      "name": "Goal Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "card_image",
+          "label": "Card Image"
+        },
+        {
+          "type": "text",
+          "id": "card_text",
+          "label": "Card Text (Optional)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Goals Section",
+      "blocks": [
+        {
+          "type": "category",
+          "settings": {
+            "category_name": "Frontend"
+          }
+        },
+        {
+          "type": "category",
+          "settings": {
+            "category_name": "Backend"
+          }
+        },
+        {
+          "type": "category",
+          "settings": {
+            "category_name": "Databases"
+          }
+        },
+        {
+          "type": "category",
+          "settings": {
+            "category_name": "Data Analytics"
+          }
+        },
+        {
+          "type": "category",
+          "settings": {
+            "category_name": "Mobile Apps"
+          }
+        },
+        {
+          "type": "goal_card",
+          "settings": {}
+        },
+        {
+          "type": "goal_card",
+          "settings": {}
+        },
+        {
+          "type": "goal_card",
+          "settings": {}
+        },
+        {
+          "type": "goal_card",
+          "settings": {}
+        },
+        {
+          "type": "goal_card",
+          "settings": {}
+        },
+        {
+          "type": "goal_card",
+          "settings": {}
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

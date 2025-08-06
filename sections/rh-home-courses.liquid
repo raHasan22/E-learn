@@ -1,0 +1,1176 @@
+{% style %}
+    .rh-homepage-courses-section{
+    padding: {{ section.settings.section_padding_top }}px {{ section.settings.section_padding_horizontal }}px {{ section.settings.section_padding_bottom }}px;
+    background-color: {{ section.settings.background_color }};
+}
+.rh-homepage-courses-section .container_rh{
+    max-width: 1300px;
+    margin: 0 auto;
+}
+.rh-homepage-courses-section .rh-courses-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: {{ section.settings.header_gap }}px;
+    margin-bottom: {{ section.settings.header_margin_bottom }}px;
+}
+.rh-homepage-courses-section .rh-courses-header .rh-header-title{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: {{ section.settings.title_font_size }}px;
+    line-height: 120%;
+    color: {{ section.settings.title_color }};
+    text-align: center;
+    margin: 0;
+}
+.rh-homepage-courses-section .rh-courses-header .rh-header-desc{
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: {{ section.settings.description_font_size }}px;
+    line-height: 140%;
+    color: {{ section.settings.description_color }};
+    text-align: center;
+    margin: 0;
+}
+
+/* Courses Section Header Responsive */
+@media screen and (max-width: 1439px) and (min-width: 1200px) {
+    .rh-homepage-courses-section .rh-courses-header .rh-header-title {
+        font-size: 44px;
+    }
+    
+    .rh-homepage-courses-section .rh-courses-header .rh-header-desc {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 1024px) {
+    .rh-homepage-courses-section .rh-courses-header .rh-header-title {
+        font-size: 40px;
+    }
+    
+    .rh-homepage-courses-section .rh-courses-header .rh-header-desc {
+        font-size: 17px;
+    }
+}
+
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+    .rh-homepage-courses-section .rh-courses-header .rh-header-title {
+        font-size: 36px;
+    }
+    
+    .rh-homepage-courses-section .rh-courses-header .rh-header-desc {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 600px) {
+    .rh-homepage-courses-section .rh-courses-header .rh-header-title {
+        font-size: 32px;
+    }
+    
+    .rh-homepage-courses-section .rh-courses-header .rh-header-desc {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 599px) and (min-width: 480px) {
+    .rh-homepage-courses-section .rh-courses-header .rh-header-title {
+        font-size: 28px;
+    }
+    
+    .rh-homepage-courses-section .rh-courses-header .rh-header-desc {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 479px) and (min-width: 375px) {
+    .rh-homepage-courses-section .rh-courses-header .rh-header-title {
+        font-size: 24px;
+    }
+    
+    .rh-homepage-courses-section .rh-courses-header .rh-header-desc {
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .rh-homepage-courses-section .rh-courses-header .rh-header-title {
+        font-size: 22px;
+    }
+    
+    .rh-homepage-courses-section .rh-courses-header .rh-header-desc {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 319px) {
+    .rh-homepage-courses-section .rh-courses-header .rh-header-title {
+        font-size: 20px;
+    }
+    
+    .rh-homepage-courses-section .rh-courses-header .rh-header-desc {
+        font-size: 11px;
+    }
+}
+
+.rh-homepage-courses-section .rh-courses-cards{
+    display: flex;
+    justify-content: center;
+    gap: {{ section.settings.cards_gap }}px;
+    flex-wrap: wrap;
+}
+
+/* Course Card Styles */
+.rh-course-card {
+    background: {{ section.settings.card_background_color }};
+    border-radius: {{ section.settings.card_border_radius }}px;
+    outline: 1px {{ section.settings.card_border_color }} solid;
+    outline-offset: -1px;
+    padding: {{ section.settings.card_padding }}px;
+    width: calc(25% - {{ section.settings.cards_gap }}px * 0.75);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+}
+
+.rh-course-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    outline: 2px {{ section.settings.card_hover_border_color }} solid;
+}
+
+.rh-course-card-image-container {
+    margin-bottom: {{ section.settings.image_margin_bottom }}px;
+}
+
+.rh-course-card-image-wrapper {
+    overflow: hidden;
+    border-radius: {{ section.settings.image_border_radius }}px;
+    position: relative;
+}
+
+.rh-course-card-image {
+    width: 100%;
+    height: {{ section.settings.image_height }}px;
+    overflow: hidden;
+    border-bottom: {{ section.settings.image_bottom_border }}px {{ section.settings.image_bottom_border_color }} solid;
+}
+.rh-course-card-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rh-course-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: {{ section.settings.content_gap }}px;
+}
+
+.rh-course-card-text-content {
+    display: flex;
+    flex-direction: column;
+    gap: {{ section.settings.text_content_gap }}px;
+}
+
+.rh-course-card-title {
+    color: {{ section.settings.card_title_color }};
+    font-size: {{ section.settings.card_title_font_size }}px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    line-height: 120%;
+    margin: 0;
+    text-align: left;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+
+.rh-course-card-description {
+    color: {{ section.settings.card_description_color }};
+    font-size: {{ section.settings.card_description_font_size }}px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    line-height: 160%;
+    margin: 0;
+    text-align: left;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0;
+}
+
+.rh-course-card-duration {
+    display: flex;
+    align-items: center;
+    gap: {{ section.settings.duration_icon_gap }}px;
+}
+
+.rh-course-card-duration-icon {
+    width: {{ section.settings.duration_icon_size }}px;
+    height: {{ section.settings.duration_icon_size }}px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rh-course-card-duration-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.rh-course-card-duration-text {
+    color: {{ section.settings.duration_text_color }};
+    font-size: {{ section.settings.duration_text_font_size }}px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    line-height: 115%;
+    text-align: left;
+}
+
+/* Responsive for course cards */
+
+/* Large Desktop (1440px and above) */
+@media screen and (min-width: 1440px) {
+    .rh-homepage-courses-section .rh-courses-cards {
+        gap: calc({{ section.settings.cards_gap }}px * 1.33);
+        justify-content: center;
+    }
+    
+    .rh-course-card {
+        width: calc(25% - calc({{ section.settings.cards_gap }}px * 1.33) * 0.75);
+        padding: calc({{ section.settings.card_padding }}px * 1.2);
+    }
+    
+    .rh-course-card-content {
+        gap: calc({{ section.settings.content_gap }}px * 1.17);
+    }
+    
+    .rh-course-card-text-content {
+        gap: calc({{ section.settings.text_content_gap }}px * 1.11);
+    }
+    
+    .rh-course-card-image {
+        height: calc({{ section.settings.image_height }}px * 1.13);
+    }
+    
+    .rh-course-card-title {
+        font-size: calc({{ section.settings.card_title_font_size }}px * 1.11);
+        line-height: 120%;
+    }
+    
+    .rh-course-card-description {
+        font-size: calc({{ section.settings.card_description_font_size }}px * 1.17);
+        line-height: 160%;
+    }
+    
+    .rh-course-card-duration-text {
+        font-size: calc({{ section.settings.duration_text_font_size }}px * 1.14);
+        line-height: 115%;
+    }
+    
+    .rh-course-card-duration-icon {
+        width: calc({{ section.settings.duration_icon_size }}px * 1.13);
+        height: calc({{ section.settings.duration_icon_size }}px * 1.13);
+    }
+}
+
+/* Desktop (1200px - 1439px) */
+@media screen and (max-width: 1439px) and (min-width: 1200px) {
+    .rh-homepage-courses-section .rh-courses-cards {
+        gap: calc({{ section.settings.cards_gap }}px * 1.17);
+        justify-content: center;
+    }
+    
+    .rh-course-card {
+        width: calc(25% - calc({{ section.settings.cards_gap }}px * 1.17) * 0.75);
+        padding: {{ section.settings.card_padding }}px;
+    }
+    
+    .rh-course-card-content {
+        gap: {{ section.settings.content_gap }}px;
+    }
+    
+    .rh-course-card-text-content {
+        gap: {{ section.settings.text_content_gap }}px;
+    }
+    
+    .rh-course-card-image {
+        height: {{ section.settings.image_height }}px;
+    }
+    
+    .rh-course-card-title {
+        font-size: {{ section.settings.card_title_font_size }}px;
+        line-height: 120%;
+    }
+    
+    .rh-course-card-description {
+        font-size: {{ section.settings.card_description_font_size }}px;
+        line-height: 160%;
+    }
+    
+    .rh-course-card-duration-text {
+        font-size: {{ section.settings.duration_text_font_size }}px;
+        line-height: 115%;
+    }
+}
+
+/* Laptop (1024px - 1199px) */
+@media screen and (max-width: 1199px) and (min-width: 1024px) {
+    .rh-homepage-courses-section .rh-courses-cards {
+        gap: {{ section.settings.cards_gap }}px;
+        justify-content: center;
+    }
+    
+    .rh-course-card {
+        width: calc(25% - {{ section.settings.cards_gap }}px * 0.75);
+        padding: {{ section.settings.card_padding }}px;
+    }
+    
+    .rh-course-card-content {
+        gap: calc({{ section.settings.content_gap }}px * 0.92);
+    }
+    
+    .rh-course-card-text-content {
+        gap: calc({{ section.settings.text_content_gap }}px * 0.89);
+    }
+    
+    .rh-course-card-image {
+        height: calc({{ section.settings.image_height }}px * 0.94);
+    }
+    
+    .rh-course-card-title {
+        font-size: calc({{ section.settings.card_title_font_size }}px * 0.89);
+        line-height: 120%;
+    }
+    
+    .rh-course-card-description {
+        font-size: calc({{ section.settings.card_description_font_size }}px * 0.92);
+        line-height: 160%;
+    }
+    
+    .rh-course-card-duration-text {
+        font-size: calc({{ section.settings.duration_text_font_size }}px * 0.93);
+        line-height: 115%;
+    }
+}
+
+/* Tablet Landscape (768px - 1023px) */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+    .rh-homepage-courses-section .rh-courses-cards {
+        gap: calc({{ section.settings.cards_gap }}px * 0.83);
+        justify-content: center;
+    }
+    
+    .rh-course-card {
+        width: calc(33.333% - calc({{ section.settings.cards_gap }}px * 0.83) * 0.67);
+        padding: calc({{ section.settings.card_padding }}px * 0.8);
+    }
+    
+    .rh-course-card-content {
+        gap: calc({{ section.settings.content_gap }}px * 0.83);
+    }
+    
+    .rh-course-card-text-content {
+        gap: calc({{ section.settings.text_content_gap }}px * 0.78);
+    }
+    
+    .rh-course-card-image {
+        height: calc({{ section.settings.image_height }}px * 0.88);
+    }
+    
+    .rh-course-card-title {
+        font-size: calc({{ section.settings.card_title_font_size }}px * 0.83);
+        line-height: 120%;
+    }
+    
+    .rh-course-card-description {
+        font-size: calc({{ section.settings.card_description_font_size }}px * 0.83);
+        line-height: 160%;
+    }
+    
+    .rh-course-card-duration-text {
+        font-size: calc({{ section.settings.duration_text_font_size }}px * 0.86);
+        line-height: 115%;
+    }
+    
+    .rh-course-card-duration-icon {
+        width: calc({{ section.settings.duration_icon_size }}px * 0.88);
+        height: calc({{ section.settings.duration_icon_size }}px * 0.88);
+    }
+}
+
+/* Tablet Portrait (600px - 767px) */
+@media screen and (max-width: 767px) and (min-width: 600px) {
+    .rh-homepage-courses-section .rh-courses-cards {
+        gap: calc({{ section.settings.cards_gap }}px * 0.67);
+        justify-content: center;
+    }
+    
+    .rh-course-card {
+        width: calc(50% - calc({{ section.settings.cards_gap }}px * 0.67) * 0.5);
+        padding: calc({{ section.settings.card_padding }}px * 0.8);
+    }
+    
+    .rh-course-card-content {
+        gap: calc({{ section.settings.content_gap }}px * 0.75);
+    }
+    
+    .rh-course-card-text-content {
+        gap: calc({{ section.settings.text_content_gap }}px * 0.67);
+    }
+    
+    .rh-course-card-image {
+        height: calc({{ section.settings.image_height }}px * 0.81);
+    }
+    
+    .rh-course-card-title {
+        font-size: calc({{ section.settings.card_title_font_size }}px * 0.78);
+        line-height: 120%;
+    }
+    
+    .rh-course-card-description {
+        font-size: calc({{ section.settings.card_description_font_size }}px * 0.75);
+        line-height: 160%;
+    }
+    
+    .rh-course-card-duration-text {
+        font-size: calc({{ section.settings.duration_text_font_size }}px * 0.79);
+        line-height: 115%;
+    }
+    
+    .rh-course-card-duration-icon {
+        width: calc({{ section.settings.duration_icon_size }}px * 0.88);
+        height: calc({{ section.settings.duration_icon_size }}px * 0.88);
+    }
+}
+
+/* Mobile Large (480px - 599px) */
+@media screen and (max-width: 599px) and (min-width: 480px) {
+    .rh-homepage-courses-section .rh-courses-cards {
+        gap: calc({{ section.settings.cards_gap }}px * 0.58);
+        justify-content: center;
+    }
+    
+    .rh-course-card {
+        width: calc(50% - calc({{ section.settings.cards_gap }}px * 0.58) * 0.5);
+        padding: calc({{ section.settings.card_padding }}px * 0.6);
+    }
+    
+    .rh-course-card-content {
+        gap: calc({{ section.settings.content_gap }}px * 0.67);
+    }
+    
+    .rh-course-card-text-content {
+        gap: calc({{ section.settings.text_content_gap }}px * 0.56);
+    }
+    
+    .rh-course-card-image {
+        height: calc({{ section.settings.image_height }}px * 0.75);
+    }
+    
+    .rh-course-card-title {
+        font-size: calc({{ section.settings.card_title_font_size }}px * 0.72);
+        line-height: 120%;
+    }
+    
+    .rh-course-card-description {
+        font-size: calc({{ section.settings.card_description_font_size }}px * 0.67);
+        line-height: 160%;
+    }
+    
+    .rh-course-card-duration-text {
+        font-size: calc({{ section.settings.duration_text_font_size }}px * 0.71);
+        line-height: 115%;
+    }
+    
+    .rh-course-card-duration-icon {
+        width: calc({{ section.settings.duration_icon_size }}px * 0.75);
+        height: calc({{ section.settings.duration_icon_size }}px * 0.75);
+    }
+}
+
+/* Mobile Medium (375px - 479px) */
+@media screen and (max-width: 479px) and (min-width: 375px) {
+    .rh-homepage-courses-section .rh-courses-cards {
+        gap: calc({{ section.settings.cards_gap }}px * 0.5);
+        justify-content: center;
+    }
+    
+    .rh-course-card {
+        width: calc(50% - calc({{ section.settings.cards_gap }}px * 0.5) * 0.5);
+        padding: calc({{ section.settings.card_padding }}px * 0.6);
+    }
+    
+    .rh-course-card-content {
+        gap: calc({{ section.settings.content_gap }}px * 0.58);
+    }
+    
+    .rh-course-card-text-content {
+        gap: calc({{ section.settings.text_content_gap }}px * 0.44);
+    }
+    
+    .rh-course-card-image {
+        height: calc({{ section.settings.image_height }}px * 0.69);
+    }
+    
+    .rh-course-card-title {
+        font-size: calc({{ section.settings.card_title_font_size }}px * 0.67);
+        line-height: 120%;
+    }
+    
+    .rh-course-card-description {
+        font-size: calc({{ section.settings.card_description_font_size }}px * 0.58);
+        line-height: 160%;
+    }
+    
+    .rh-course-card-duration-text {
+        font-size: calc({{ section.settings.duration_text_font_size }}px * 0.64);
+        line-height: 115%;
+    }
+    
+    .rh-course-card-duration-icon {
+        width: calc({{ section.settings.duration_icon_size }}px * 0.69);
+        height: calc({{ section.settings.duration_icon_size }}px * 0.69);
+    }
+}
+
+/* Mobile Small (320px - 374px) */
+@media screen and (max-width: 374px) {
+    .rh-homepage-courses-section .rh-courses-cards {
+        gap: calc({{ section.settings.cards_gap }}px * 0.42);
+        justify-content: center;
+    }
+    
+    .rh-course-card {
+        width: calc(50% - calc({{ section.settings.cards_gap }}px * 0.42) * 0.5);
+        padding: calc({{ section.settings.card_padding }}px * 0.5);
+    }
+    
+    .rh-course-card-content {
+        gap: calc({{ section.settings.content_gap }}px * 0.5);
+    }
+    
+    .rh-course-card-text-content {
+        gap: calc({{ section.settings.text_content_gap }}px * 0.33);
+    }
+    
+    .rh-course-card-image {
+        height: calc({{ section.settings.image_height }}px * 0.63);
+    }
+    
+    .rh-course-card-title {
+        font-size: calc({{ section.settings.card_title_font_size }}px * 0.61);
+        line-height: 120%;
+    }
+    
+    .rh-course-card-description {
+        font-size: calc({{ section.settings.card_description_font_size }}px * 0.5);
+        line-height: 160%;
+    }
+    
+    .rh-course-card-duration-text {
+        font-size: calc({{ section.settings.duration_text_font_size }}px * 0.57);
+        line-height: 115%;
+    }
+    
+    .rh-course-card-duration-icon {
+        width: calc({{ section.settings.duration_icon_size }}px * 0.63);
+        height: calc({{ section.settings.duration_icon_size }}px * 0.63);
+    }
+}
+
+/* Extra Small Mobile (below 320px) */
+@media screen and (max-width: 319px) {
+    .rh-homepage-courses-section .rh-courses-cards {
+        gap: calc({{ section.settings.cards_gap }}px * 0.33);
+        justify-content: center;
+    }
+    
+    .rh-course-card {
+        width: calc(100% - calc({{ section.settings.cards_gap }}px * 0.33) * 0.5);
+        padding: calc({{ section.settings.card_padding }}px * 0.4);
+    }
+    
+    .rh-course-card-content {
+        gap: calc({{ section.settings.content_gap }}px * 0.42);
+    }
+    
+    .rh-course-card-text-content {
+        gap: calc({{ section.settings.text_content_gap }}px * 0.22);
+    }
+    
+    .rh-course-card-image {
+        height: calc({{ section.settings.image_height }}px * 0.56);
+    }
+    
+    .rh-course-card-title {
+        font-size: calc({{ section.settings.card_title_font_size }}px * 0.56);
+        line-height: 120%;
+    }
+    
+    .rh-course-card-description {
+        font-size: calc({{ section.settings.card_description_font_size }}px * 0.42);
+        line-height: 160%;
+    }
+    
+    .rh-course-card-duration-text {
+        font-size: calc({{ section.settings.duration_text_font_size }}px * 0.5);
+        line-height: 115%;
+    }
+    
+    .rh-course-card-duration-icon {
+        width: calc({{ section.settings.duration_icon_size }}px * 0.56);
+        height: calc({{ section.settings.duration_icon_size }}px * 0.56);
+    }
+}
+
+{% endstyle %}
+
+<div class="rh-homepage-courses-section">
+    <div class="container_rh">
+      <div class="rh-courses-header">
+        <h2 class="rh-header-title">{{ section.settings.section_title }}</h2>
+        <p class="rh-header-desc">
+          {{ section.settings.section_description }}
+        </p>
+      </div>
+      <div class="rh-courses-cards">
+        {% if section.settings.product_source == 'collection' and section.settings.collection != blank %}
+          {% for product in section.settings.collection.products limit: section.settings.products_limit %}
+            <a href="{{ product.url }}" class="rh-course-card">
+              <div class="rh-course-card-image-container">
+                <div class="rh-course-card-image-wrapper">
+                  <div class="rh-course-card-image">
+                    {% if product.featured_image %}
+                      {{ product.featured_image | image_url: width: 284 | image_tag: alt: product.featured_image.alt, loading: 'lazy' }}
+                    {% else %}
+                      <img src="https://dummyimage.com/284x195/cccccc/ffffff&text=Course+Image" alt="Course placeholder" />
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+              <div class="rh-course-card-content">
+                <div class="rh-course-card-text-content">
+                  <h3 class="rh-course-card-title">
+                    {{ product.title }}
+                  </h3>
+                  <p class="rh-course-card-description">
+                    {% if product.description != blank %}
+                      {{ product.description | strip_html | truncate: 120 }}
+                    {% else %}
+                      {{ section.settings.default_description }}
+                    {% endif %}
+                  </p>
+                </div>
+                <div class="rh-course-card-duration">
+                  <div class="rh-course-card-duration-icon">
+                    {% if section.settings.duration_icon %}
+                      {{ section.settings.duration_icon | image_url: width: 16 | image_tag: alt: section.settings.duration_icon.alt, loading: 'lazy' }}
+                    {% else %}
+                      <img src="{{ 'clock.png' | asset_url }}" alt="Duration icon" />
+                    {% endif %}
+                  </div>
+                  <div class="rh-course-card-duration-text">
+                    {% if product.metafields.custom.duration and product.metafields.custom.duration != blank and product.metafields.custom.duration != '{}' %}
+                      {{ product.metafields.custom.duration }}
+                    {% elsif product.metafields.course.duration and product.metafields.course.duration != blank and product.metafields.course.duration != '{}' %}
+                      {{ product.metafields.course.duration }}
+                    {% elsif product.metafields.duration and product.metafields.duration != blank and product.metafields.duration != '{}' %}
+                      {{ product.metafields.duration }}
+                    {% else %}
+                      {{ section.settings.default_duration }}
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            </a>
+          {% endfor %}
+        {% elsif section.settings.product_source == 'specific' and section.settings.specific_products != blank %}
+          {% for product in section.settings.specific_products limit: section.settings.products_limit %}
+            {% if product != blank %}
+              <a href="{{ product.url }}" class="rh-course-card">
+                <div class="rh-course-card-image-container">
+                  <div class="rh-course-card-image-wrapper">
+                    <div class="rh-course-card-image">
+                      {% if product.featured_image %}
+                        {{ product.featured_image | image_url: width: 284 | image_tag: alt: product.featured_image.alt, loading: 'lazy' }}
+                      {% else %}
+                        <img src="https://dummyimage.com/284x195/cccccc/ffffff&text=Course+Image" alt="Course placeholder" />
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+                <div class="rh-course-card-content">
+                  <div class="rh-course-card-text-content">
+                    <h3 class="rh-course-card-title">
+                      {{ product.title }}
+                    </h3>
+                    <p class="rh-course-card-description">
+                      {% if product.description != blank %}
+                        {{ product.description | strip_html | truncate: 120 }}
+                      {% else %}
+                        {{ section.settings.default_description }}
+                      {% endif %}
+                    </p>
+                  </div>
+                  <div class="rh-course-card-duration">
+                    <div class="rh-course-card-duration-icon">
+                      {% if section.settings.duration_icon %}
+                        {{ section.settings.duration_icon | image_url: width: 16 | image_tag: alt: section.settings.duration_icon.alt, loading: 'lazy' }}
+                      {% else %}
+                        <img src="{{ 'clock.png' | asset_url }}" alt="Duration icon" />
+                      {% endif %}
+                    </div>
+                    <div class="rh-course-card-duration-text">
+                      {% if product.metafields.custom.duration and product.metafields.custom.duration != blank and product.metafields.custom.duration != '{}' %}
+                        {{ product.metafields.custom.duration }}
+                      {% elsif product.metafields.course.duration and product.metafields.course.duration != blank and product.metafields.course.duration != '{}' %}
+                        {{ product.metafields.course.duration }}
+                      {% elsif product.metafields.duration and product.metafields.duration != blank and product.metafields.duration != '{}' %}
+                        {{ product.metafields.duration }}
+                      {% else %}
+                        {{ section.settings.default_duration }}
+                      {% endif %}
+                    </div>
+                  </div>
+                </div>
+              </a>
+            {% endif %}
+          {% endfor %}
+        {% else %}
+          <!-- Fallback content when no products are selected -->
+          {% for i in (1..8) %}
+            <div class="rh-course-card">
+              <div class="rh-course-card-image-container">
+                <div class="rh-course-card-image-wrapper">
+                  <div class="rh-course-card-image">
+                    <img src="https://dummyimage.com/284x195/cccccc/ffffff&text=Course+{{ i }}" alt="Course placeholder" />
+                  </div>
+                </div>
+              </div>
+              <div class="rh-course-card-content">
+                <div class="rh-course-card-text-content">
+                  <h3 class="rh-course-card-title">
+                    Sample Course {{ i }}
+                  </h3>
+                  <p class="rh-course-card-description">
+                    This is a sample course description. Please select a collection or specific products to display real content.
+                  </p>
+                </div>
+                <div class="rh-course-card-duration">
+                  <div class="rh-course-card-duration-icon">
+                    <img src="{{ 'clock.png' | asset_url }}" alt="Duration icon" />
+                  </div>
+                  <div class="rh-course-card-duration-text">
+                    {{ section.settings.default_duration }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+{% schema %}
+{
+  "name": "RH Home Courses",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Content"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "default": "Learning Paths and Courses"
+    },
+    {
+      "type": "textarea",
+      "id": "section_description",
+      "label": "Section Description",
+      "default": "Created with passion for more than 2,500,000 students"
+    },
+    {
+      "type": "header",
+      "content": "Product Source"
+    },
+    {
+      "type": "select",
+      "id": "product_source",
+      "label": "Product Source",
+      "options": [
+        {
+          "value": "collection",
+          "label": "From Collection"
+        },
+        {
+          "value": "specific",
+          "label": "Specific Products"
+        }
+      ],
+      "default": "collection"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection",
+      "info": "Select a collection to display its products"
+    },
+    {
+      "type": "product_list",
+      "id": "specific_products",
+      "label": "Specific Products",
+      "info": "Select specific products to display",
+      "limit": 12
+    },
+    {
+      "type": "range",
+      "id": "products_limit",
+      "min": 4,
+      "max": 12,
+      "step": 1,
+      "unit": "pcs",
+      "label": "Number of Products to Show",
+      "default": 8,
+      "info": "Applies to both collection and specific products"
+    },
+    {
+      "type": "header",
+      "content": "Default Content"
+    },
+    {
+      "type": "textarea",
+      "id": "default_description",
+      "label": "Default Description",
+      "default": "Learn essential skills and advance your career with our comprehensive courses.",
+      "info": "Used when product has no description"
+    },
+    {
+      "type": "text",
+      "id": "default_duration",
+      "label": "Default Duration",
+      "default": "05 Hour 45 Min",
+      "info": "Used when product has no duration metafield"
+    },
+    {
+      "type": "image_picker",
+      "id": "duration_icon",
+      "label": "Duration Icon"
+    },
+    {
+      "type": "header",
+      "content": "Section Spacing"
+    },
+    {
+      "type": "range",
+      "id": "section_padding_top",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "Section Top Padding",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "section_padding_bottom",
+      "min": 0,
+      "max": 200,
+      "step": 10,
+      "unit": "px",
+      "label": "Section Bottom Padding",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "section_padding_horizontal",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Section Horizontal Padding",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Header Styling"
+    },
+    {
+      "type": "range",
+      "id": "header_gap",
+      "min": 8,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Header Gap",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "header_margin_bottom",
+      "min": 20,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "label": "Header Bottom Margin",
+      "default": 45
+    },
+    {
+      "type": "range",
+      "id": "title_font_size",
+      "min": 24,
+      "max": 80,
+      "step": 2,
+      "unit": "px",
+      "label": "Title Font Size",
+      "default": 50
+    },
+    {
+      "type": "range",
+      "id": "description_font_size",
+      "min": 14,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "label": "Description Font Size",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Cards Layout"
+    },
+    {
+      "type": "range",
+      "id": "cards_gap",
+      "min": 12,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Cards Gap",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "card_padding",
+      "min": 5,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Card Padding",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "card_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Card Border Radius",
+      "default": 10
+    },
+    {
+      "type": "range",
+      "id": "content_gap",
+      "min": 16,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Content Gap",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "text_content_gap",
+      "min": 12,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Text Content Gap",
+      "default": 18
+    },
+    {
+      "type": "header",
+      "content": "Image Styling"
+    },
+    {
+      "type": "range",
+      "id": "image_height",
+      "min": 100,
+      "max": 300,
+      "step": 10,
+      "unit": "px",
+      "label": "Image Height",
+      "default": 160
+    },
+    {
+      "type": "range",
+      "id": "image_margin_bottom",
+      "min": 10,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Image Bottom Margin",
+      "default": 24
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Image Border Radius",
+      "default": 6
+    },
+    {
+      "type": "range",
+      "id": "image_bottom_border",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Image Bottom Border",
+      "default": 6
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "card_title_font_size",
+      "min": 12,
+      "max": 32,
+      "step": 1,
+      "unit": "px",
+      "label": "Card Title Font Size",
+      "default": 18
+    },
+    {
+      "type": "range",
+      "id": "card_description_font_size",
+      "min": 8,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Card Description Font Size",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "duration_text_font_size",
+      "min": 10,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Duration Text Font Size",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "duration_icon_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Duration Icon Size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "duration_icon_gap",
+      "min": 4,
+      "max": 16,
+      "step": 1,
+      "unit": "px",
+      "label": "Duration Icon Gap",
+      "default": 8
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Section Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#272727"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description Color",
+      "default": "#272727"
+    },
+    {
+      "type": "color",
+      "id": "card_background_color",
+      "label": "Card Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "card_border_color",
+      "label": "Card Border Color",
+      "default": "#E7F0EA"
+    },
+    {
+      "type": "color",
+      "id": "card_hover_border_color",
+      "label": "Card Hover Border Color",
+      "default": "#05CE78"
+    },
+    {
+      "type": "color",
+      "id": "card_title_color",
+      "label": "Card Title Color",
+      "default": "#292828"
+    },
+    {
+      "type": "color",
+      "id": "card_description_color",
+      "label": "Card Description Color",
+      "default": "rgba(41, 40, 40, 0.80)"
+    },
+    {
+      "type": "color",
+      "id": "duration_text_color",
+      "label": "Duration Text Color",
+      "default": "#05CE78"
+    },
+    {
+      "type": "color",
+      "id": "image_bottom_border_color",
+      "label": "Image Bottom Border Color",
+      "default": "#05CE78"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Home Courses Section"
+    }
+  ]
+}
+{% endschema %}

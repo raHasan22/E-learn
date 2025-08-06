@@ -1,0 +1,577 @@
+{% comment %}
+  Renders a product card with custom course styling
+
+  Accepts:
+  - card_product: {Object} Product Liquid object (optional)
+  - show_duration: {Boolean} Show duration from metafields. Default: true (optional)
+  - default_duration: {String} Default duration text. Default: "05 Hour 45 Min" (optional)
+  - duration_icon: {String} Duration icon asset path. Default: "clock.png" (optional)
+  - show_description: {Boolean} Show product description. Default: true (optional)
+  - description_length: {Number} Max characters for description. Default: 120 (optional)
+  - card_class: {String} Additional CSS classes for the card. Default: "" (optional)
+
+  Usage:
+  {% render 'card-product', card_product: product, show_duration: true %}
+{% endcomment %}
+
+{%- liquid
+  assign show_duration = show_duration | default: true
+  assign default_duration = default_duration | default: "05 Hour 45 Min"
+  assign duration_icon = duration_icon | default: "clock.png"
+  assign show_description = show_description | default: true
+  assign description_length = description_length | default: 120
+  assign card_class = card_class | default: ""
+-%}
+
+{% style %}
+ /* Course Card Styles */
+.rh-course-card {
+    background: white;
+    border-radius: 10px;
+    outline: 1px #E7F0EA solid;
+    outline-offset: -1px;
+    padding: 10px;
+    width: 100%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.rh-course-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    outline: 2px #05CE78 solid;
+}
+
+.rh-course-card-image-container {
+    margin-bottom: 24px;
+}
+
+.rh-course-card-image-wrapper {
+    overflow: hidden;
+    border-radius: 6px;
+    position: relative;
+}
+
+.rh-course-card-image {
+    width: 100%;
+    height: 160px;
+    overflow: hidden;
+    border-bottom: 6px #05CE78 solid;
+}
+.rh-course-card-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rh-course-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.rh-course-card-text-content {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.rh-course-card-title {
+    color: #292828;
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    line-height: 120%;
+    margin: 0;
+    text-align: left;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.rh-course-card-description {
+    color: rgba(41, 40, 40, 0.80);
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    line-height: 160%;
+    margin: 0;
+    text-align: left;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.rh-course-card-duration {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.rh-course-card-duration-icon {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rh-course-card-duration-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.rh-course-card-duration-text {
+    color: #05CE78;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    line-height: 115%;
+    text-align: left;
+}
+
+/* Responsive for course cards */
+
+/* Large Desktop (1440px and above) */
+@media screen and (min-width: 1440px) {
+    
+    .rh-course-card {
+        padding: 12px;
+    }
+    
+    .rh-course-card-content {
+        gap: 28px;
+    }
+    
+    .rh-course-card-text-content {
+        gap: 20px;
+    }
+    
+    .rh-course-card-image {
+        height: 180px;
+    }
+    
+    .rh-course-card-title {
+        font-size: 20px;
+        line-height: 120%;
+    }
+    
+    .rh-course-card-description {
+        font-size: 14px;
+        line-height: 160%;
+    }
+    
+    .rh-course-card-duration-text {
+        font-size: 16px;
+        line-height: 115%;
+    }
+    
+    .rh-course-card-duration-icon {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+/* Desktop (1200px - 1439px) */
+@media screen and (max-width: 1439px) and (min-width: 1200px) {
+   
+    
+    .rh-course-card {
+        padding: 10px;
+    }
+    
+    .rh-course-card-content {
+        gap: 24px;
+    }
+    
+    .rh-course-card-text-content {
+        gap: 18px;
+    }
+    
+    .rh-course-card-image {
+        height: 160px;
+    }
+    
+    .rh-course-card-title {
+        font-size: 18px;
+        line-height: 120%;
+    }
+    
+    .rh-course-card-description {
+        font-size: 12px;
+        line-height: 160%;
+    }
+    
+    .rh-course-card-duration-text {
+        font-size: 14px;
+        line-height: 115%;
+    }
+}
+
+/* Laptop (1024px - 1199px) */
+@media screen and (max-width: 1199px) and (min-width: 1024px) {
+   
+    
+    .rh-course-card {
+        padding: 10px;
+    }
+    
+    .rh-course-card-content {
+        gap: 22px;
+    }
+    
+    .rh-course-card-text-content {
+        gap: 16px;
+    }
+    
+    .rh-course-card-image {
+        height: 150px;
+    }
+    
+    .rh-course-card-title {
+        font-size: 16px;
+        line-height: 120%;
+    }
+    
+    .rh-course-card-description {
+        font-size: 11px;
+        line-height: 160%;
+    }
+    
+    .rh-course-card-duration-text {
+        font-size: 13px;
+        line-height: 115%;
+    }
+}
+
+/* Tablet Landscape (768px - 1023px) */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+    
+    
+    .rh-course-card {
+        padding: 8px;
+    }
+    
+    .rh-course-card-content {
+        gap: 20px;
+    }
+    
+    .rh-course-card-text-content {
+        gap: 14px;
+    }
+    
+    .rh-course-card-image {
+        height: 140px;
+    }
+    
+    .rh-course-card-title {
+        font-size: 15px;
+        line-height: 120%;
+    }
+    
+    .rh-course-card-description {
+        font-size: 10px;
+        line-height: 160%;
+    }
+    
+    .rh-course-card-duration-text {
+        font-size: 12px;
+        line-height: 115%;
+    }
+    
+    .rh-course-card-duration-icon {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+/* Tablet Portrait (600px - 767px) */
+@media screen and (max-width: 767px) and (min-width: 600px) {
+
+    
+    .rh-course-card {
+        padding: 8px;
+    }
+    
+    .rh-course-card-content {
+        gap: 18px;
+    }
+    
+    .rh-course-card-text-content {
+        gap: 12px;
+    }
+    
+    .rh-course-card-image {
+        height: 130px;
+    }
+    
+    .rh-course-card-title {
+        font-size: 14px;
+        line-height: 120%;
+    }
+    
+    .rh-course-card-description {
+        font-size: 9px;
+        line-height: 160%;
+    }
+    
+    .rh-course-card-duration-text {
+        font-size: 11px;
+        line-height: 115%;
+    }
+    
+    .rh-course-card-duration-icon {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+/* Mobile Large (480px - 599px) */
+@media screen and (max-width: 599px) and (min-width: 480px) {
+
+    
+    .rh-course-card {
+        padding: 6px;
+    }
+    
+    .rh-course-card-content {
+        gap: 16px;
+    }
+    
+    .rh-course-card-text-content {
+        gap: 10px;
+    }
+    
+    .rh-course-card-image {
+        height: 120px;
+    }
+    
+    .rh-course-card-title {
+        font-size: 13px;
+        line-height: 120%;
+    }
+    
+    .rh-course-card-description {
+        font-size: 8px;
+        line-height: 160%;
+    }
+    
+    .rh-course-card-duration-text {
+        font-size: 10px;
+        line-height: 115%;
+    }
+    
+    .rh-course-card-duration-icon {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+/* Mobile Medium (375px - 479px) */
+@media screen and (max-width: 479px) and (min-width: 375px) {
+
+    
+    .rh-course-card {
+        padding: 6px;
+    }
+    
+    .rh-course-card-content {
+        gap: 14px;
+    }
+    
+    .rh-course-card-text-content {
+        gap: 8px;
+    }
+    
+    .rh-course-card-image {
+        height: 110px;
+    }
+    
+    .rh-course-card-title {
+        font-size: 12px;
+        line-height: 120%;
+    }
+    
+    .rh-course-card-description {
+        font-size: 7px;
+        line-height: 160%;
+    }
+    
+    .rh-course-card-duration-text {
+        font-size: 9px;
+        line-height: 115%;
+    }
+    
+    .rh-course-card-duration-icon {
+        width: 11px;
+        height: 11px;
+    }
+}
+
+/* Mobile Small (320px - 374px) */
+@media screen and (max-width: 374px) {
+
+    
+    .rh-course-card {
+        padding: 5px;
+    }
+    
+    .rh-course-card-content {
+        gap: 12px;
+    }
+    
+    .rh-course-card-text-content {
+        gap: 6px;
+    }
+    
+    .rh-course-card-image {
+        height: 100px;
+    }
+    
+    .rh-course-card-title {
+        font-size: 11px;
+        line-height: 120%;
+    }
+    
+    .rh-course-card-description {
+        font-size: 6px;
+        line-height: 160%;
+    }
+    
+    .rh-course-card-duration-text {
+        font-size: 8px;
+        line-height: 115%;
+    }
+    
+    .rh-course-card-duration-icon {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+/* Extra Small Mobile (below 320px) */
+@media screen and (max-width: 319px) {
+    
+    .rh-course-card {
+        padding: 4px;
+    }
+    
+    .rh-course-card-content {
+        gap: 10px;
+    }
+    
+    .rh-course-card-text-content {
+        gap: 4px;
+    }
+    
+    .rh-course-card-image {
+        height: 90px;
+    }
+    
+    .rh-course-card-title {
+        font-size: 10px;
+        line-height: 120%;
+    }
+    
+    .rh-course-card-description {
+        font-size: 5px;
+        line-height: 160%;
+    }
+    
+    .rh-course-card-duration-text {
+        font-size: 7px;
+        line-height: 115%;
+    }
+    
+    .rh-course-card-duration-icon {
+        width: 9px;
+        height: 9px;
+    }
+}
+{% endstyle %}
+
+{%- if card_product and card_product != empty -%}
+  <div class="rh-course-card {{ card_class }}">
+    <div class="rh-course-card-image-container">
+      <div class="rh-course-card-image-wrapper">
+        <div class="rh-course-card-image">
+          {%- if card_product.featured_image -%}
+            {{ card_product.featured_image | image_url: width: 284 | image_tag: alt: card_product.featured_image.alt, loading: 'lazy' }}
+          {%- else -%}
+            <img src="https://placehold.co/284x195" alt="Course Image" />
+          {%- endif -%}
+        </div>
+      </div>
+    </div>
+    <div class="rh-course-card-content">
+      <div class="rh-course-card-text-content">
+        <div class="rh-course-card-title">
+          {{ card_product.title | escape }}
+        </div>
+        {%- if show_description -%}
+          <div class="rh-course-card-description">
+            {%- if card_product.description != blank -%}
+              {{ card_product.description | strip_html | truncate: description_length }}
+            {%- else -%}
+              It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+            {%- endif -%}
+          </div>
+        {%- endif -%}
+      </div>
+      {%- if show_duration -%}
+        <div class="rh-course-card-duration">
+          <div class="rh-course-card-duration-icon">
+            <img src="{{ duration_icon | asset_url }}" alt="Clock Icon" />
+          </div>
+          <div class="rh-course-card-duration-text">
+            {%- if card_product.metafields.custom.duration and card_product.metafields.custom.duration != blank and card_product.metafields.custom.duration != '{}' -%}
+              {{ card_product.metafields.custom.duration }}
+            {%- elsif card_product.metafields.course.duration and card_product.metafields.course.duration != blank and card_product.metafields.course.duration != '{}' -%}
+              {{ card_product.metafields.course.duration }}
+            {%- elsif card_product.metafields.duration and card_product.metafields.duration != blank and card_product.metafields.duration != '{}' -%}
+              {{ card_product.metafields.duration }}
+            {%- else -%}
+              {{ default_duration }}
+            {%- endif -%}
+          </div>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+{%- else -%}
+  <!-- Fallback card when no product is provided -->
+  <div class="rh-course-card {{ card_class }}">
+    <div class="rh-course-card-image-container">
+      <div class="rh-course-card-image-wrapper">
+        <div class="rh-course-card-image">
+          <img src="https://placehold.co/284x195" alt="Course Image" />
+        </div>
+      </div>
+    </div>
+    <div class="rh-course-card-content">
+      <div class="rh-course-card-text-content">
+        <div class="rh-course-card-title">
+          Sample Course Title
+        </div>
+        {%- if show_description -%}
+          <div class="rh-course-card-description">
+            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+          </div>
+        {%- endif -%}
+      </div>
+      {%- if show_duration -%}
+        <div class="rh-course-card-duration">
+          <div class="rh-course-card-duration-icon">
+            <img src="{{ duration_icon | asset_url }}" alt="Clock Icon" />
+          </div>
+          <div class="rh-course-card-duration-text">{{ default_duration }}</div>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+{%- endif -%}
