@@ -1,0 +1,828 @@
+{% style %}
+    .rh-our-tools-section {
+  background-color: {{ section.settings.background_color }};
+  padding: {{ section.settings.padding_top }}px 20px {{ section.settings.padding_bottom }}px;
+}
+.rh-our-tools-section .container_rh {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.rh-our-tools-section .rh-our-tools-header {
+  margin: 0 0 48px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.rh-our-tools-section .rh-our-tools-header .rh-header-title {
+  color: {{ section.settings.header_title_color }};
+  font-size: 50px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  line-height: 120%;
+  margin: 0;
+}
+.rh-our-tools-section .rh-our-tools-header .rh-header-desc {
+  color: {{ section.settings.header_description_color }};
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  line-height: 140%;
+  margin: 0;
+}
+.rh-our-tools-section .rh-our-tools-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 30px;
+}
+.rh-our-tools-section .rh-our-tools-content .content-left {
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-big {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 30px;
+  gap: 30px;
+  width: 100%;
+  background-color: {{ section.settings.card_background_color }};
+  border-radius: {{ section.settings.card_border_radius }}px;
+  overflow: hidden;
+}
+.rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-big .text-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+.rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-big .text-part .rh-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 24px;
+}
+.rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-big .text-part .rh-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-big .text-part .rh-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-big .text-part .rh-text .rh-title {
+  color: {{ section.settings.card_title_color }};
+  font-size: 30px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  line-height: 125%;
+  margin: 0;
+}
+.rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-big .text-part .rh-text .rh-desc {
+  color: {{ section.settings.card_description_color }};
+  font-size: 18px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 160%;
+  margin: 0;
+}
+.rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-big .video-part {
+  width: 50%;
+  position: relative;
+  border-radius: {{ section.settings.video_border_radius }}px;
+  overflow: hidden;
+  min-height: 300px;
+}
+.rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-big .video-part img,
+.rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-big .video-part video {
+  border-radius: {{ section.settings.video_border_radius }}px;
+}
+.rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-big .video-part img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-big .video-part .simple-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: {{ section.settings.video_border_radius }}px;
+  display: block;
+}
+
+
+.rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-small {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  width: 48%;
+  background-color: {{ section.settings.card_background_color }};
+  border-radius: {{ section.settings.card_border_radius }}px;
+}
+.rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-small .rh-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 24px;
+}
+.rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-small .rh-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-small .rh-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-small .rh-text .rh-title {
+  color: {{ section.settings.card_title_color }};
+  font-size: 30px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  line-height: 125%;
+  margin: 0;
+}
+.rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-small .rh-text .rh-desc {
+  color: {{ section.settings.card_description_color }};
+  font-size: 18px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 160%;
+  margin: 0;
+} 
+
+.rh-our-tools-section .rh-our-tools-content .content-right {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  gap: 30px;
+  background-color: {{ section.settings.card_background_color }};
+  border-radius: {{ section.settings.card_border_radius }}px;
+  overflow: hidden;
+}
+.rh-our-tools-section .rh-our-tools-content .content-right .content-right-item {
+  display: flex;
+  flex-direction: column;
+}
+.rh-our-tools-section .rh-our-tools-content .content-right .content-right-item .rh-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 24px;
+}
+.rh-our-tools-section .rh-our-tools-content .content-right .content-right-item .rh-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.rh-our-tools-section .rh-our-tools-content .content-right .content-right-item .rh-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.rh-our-tools-section .rh-our-tools-content .content-right .content-right-item .rh-text .rh-title {
+  color: {{ section.settings.card_title_color }};
+  font-size: 30px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  line-height: 125%;
+  margin: 0;
+}
+.rh-our-tools-section .rh-our-tools-content .content-right .content-right-item .rh-text .rh-desc {
+  color: {{ section.settings.card_description_color }};
+  font-size: 18px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 160%;
+  margin: 0;
+}
+.rh-our-tools-section .rh-our-tools-content .content-right .content-right-image {
+  width: 100%;
+  border-radius: {{ section.settings.image_border_radius }}px;
+  overflow: hidden;
+}
+.rh-our-tools-section .rh-our-tools-content .content-right .content-right-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media screen and (max-width: 1224px) {
+  .rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-small{
+    width: 47%;
+  }
+}
+
+/* Responsive styles for Our Tools section */
+@media screen and (max-width: 1023px) {
+  .rh-our-tools-section {
+    padding: {{ section.settings.padding_top | times: 0.83 | round }}px 20px {{ section.settings.padding_bottom | times: 0.83 | round }}px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-header .rh-header-title {
+    font-size: 42px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-header .rh-header-desc {
+    font-size: 18px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-content {
+    gap: 24px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-content .content-left {
+    width: 60%;
+    gap: 24px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-content .content-right {
+    width: 40%;
+    padding: 24px;
+    gap: 24px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-big {
+    padding: 24px;
+    gap: 24px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-small {
+    padding: 24px;
+    width: 47%;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-big .text-part .rh-text .rh-title,
+  .rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-small .rh-text .rh-title,
+  .rh-our-tools-section .rh-our-tools-content .content-right .content-right-item .rh-text .rh-title {
+    font-size: 26px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-big .text-part .rh-text .rh-desc,
+  .rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-small .rh-text .rh-desc,
+  .rh-our-tools-section .rh-our-tools-content .content-right .content-right-item .rh-text .rh-desc {
+    font-size: 16px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-big .text-part .rh-icon,
+  .rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-small .rh-icon,
+  .rh-our-tools-section .rh-our-tools-content .content-right .content-right-item .rh-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+  }
+  
+
+}
+
+@media screen and (max-width: 991px) {
+  .rh-our-tools-section .rh-our-tools-content {
+    flex-direction: column;
+  }
+  .rh-our-tools-section .rh-our-tools-content .content-left {
+    width: 100%;
+  }
+  .rh-our-tools-section .rh-our-tools-content .content-right {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .rh-our-tools-section {
+    padding: {{ section.settings.padding_top | times: 0.67 | round }}px 20px {{ section.settings.padding_bottom | times: 0.67 | round }}px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-header .rh-header-title {
+    font-size: 36px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-header .rh-header-desc {
+    font-size: 16px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-content .content-left {
+    width: 100%;
+    gap: 20px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-content .content-right {
+    width: 100%;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-big {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-big .text-part {
+    width: 100%;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-big .video-part {
+    width: 100%;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-small {
+    padding: 20px;
+    width: 100%;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-small .rh-text .rh-title,
+  .rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-big .text-part .rh-text .rh-title,
+  .rh-our-tools-section .rh-our-tools-content .content-right .content-right-item .rh-text .rh-title {
+    font-size: 24px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-small .rh-text .rh-desc,
+  .rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-big .text-part .rh-text .rh-desc,
+  .rh-our-tools-section .rh-our-tools-content .content-right .content-right-item .rh-text .rh-desc {
+    font-size: 15px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-small .rh-icon,
+  .rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-big .text-part .rh-icon,
+  .rh-our-tools-section .rh-our-tools-content .content-right .content-right-item .rh-icon {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 16px;
+  }
+  
+
+}
+
+@media screen and (max-width: 480px) {
+  .rh-our-tools-section {
+    padding: {{ section.settings.padding_top | times: 0.5 | round }}px 16px {{ section.settings.padding_bottom | times: 0.5 | round }}px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-header .rh-header-title {
+    font-size: 28px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-header .rh-header-desc {
+    font-size: 14px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-content {
+    gap: 16px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-content .content-left {
+    gap: 16px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-content .content-right {
+    padding: 16px;
+    gap: 16px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-big {
+    padding: 16px;
+    gap: 16px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-small {
+    padding: 16px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-small .rh-text .rh-title,
+  .rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-big .text-part .rh-text .rh-title,
+  .rh-our-tools-section .rh-our-tools-content .content-right .content-right-item .rh-text .rh-title {
+    font-size: 20px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-small .rh-text .rh-desc,
+  .rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-big .text-part .rh-text .rh-desc,
+  .rh-our-tools-section .rh-our-tools-content .content-right .content-right-item .rh-text .rh-desc {
+    font-size: 14px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-small .rh-icon,
+  .rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-big .text-part .rh-icon,
+  .rh-our-tools-section .rh-our-tools-content .content-right .content-right-item .rh-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 12px;
+  }
+  
+
+}
+
+@media screen and (max-width: 375px) {
+  .rh-our-tools-section {
+    padding: {{ section.settings.padding_top | times: 0.4 | round }}px 12px {{ section.settings.padding_bottom | times: 0.4 | round }}px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-header .rh-header-title {
+    font-size: 24px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-header .rh-header-desc {
+    font-size: 13px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-content {
+    gap: 12px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-content .content-left {
+    gap: 12px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-content .content-right {
+    padding: 12px;
+    gap: 12px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-big {
+    padding: 12px;
+    gap: 12px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-small {
+    padding: 12px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-small .rh-text .rh-title,
+  .rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-big .text-part .rh-text .rh-title,
+  .rh-our-tools-section .rh-our-tools-content .content-right .content-right-item .rh-text .rh-title {
+    font-size: 18px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-small .rh-text .rh-desc,
+  .rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-big .text-part .rh-text .rh-desc,
+  .rh-our-tools-section .rh-our-tools-content .content-right .content-right-item .rh-text .rh-desc {
+    font-size: 13px;
+  }
+  
+  .rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-small .rh-icon,
+  .rh-our-tools-section .rh-our-tools-content .content-left .content-left-item-big .text-part .rh-icon,
+  .rh-our-tools-section .rh-our-tools-content .content-right .content-right-item .rh-icon {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 10px;
+  }
+  
+
+}
+{% endstyle %}
+
+<div class="rh-our-tools-section">
+  <div class="container_rh">
+    <div class="rh-our-tools-header">
+      <h2 class="rh-header-title">{{ section.settings.header_title | default: 'You got your goal, we got the tools' }}</h2>
+      <p class="rh-header-desc">{{ section.settings.header_description | default: 'Giving you the best learning experience possible' }}</p>
+    </div>
+    <div class="rh-our-tools-content">
+      <div class="content-left">
+        <div class="content-left-item-big">
+          <div class="text-part">
+                         <div class="rh-icon">
+               {% if section.settings.big_item_icon %}
+                 <img src="{{ section.settings.big_item_icon | image_url: width: 60, height: 60 }}" alt="{{ section.settings.big_item_title }}" />
+               {% else %}
+                 <img src="https://dummyimage.com/60x60/0b5431/ffffff&text=Icon" alt="icon" />
+               {% endif %}
+             </div>
+            <div class="rh-text">
+              <h3 class="rh-title">{{ section.settings.big_item_title | default: 'Interactive, not reactive' }}</h3>
+              <p class="rh-desc">{{ section.settings.big_item_description | default: 'Our courses come with plenty of practical examples, assignments, quizzes & demos.' }}</p>
+            </div>
+          </div>
+                     <div class="video-part">
+                         {% assign video_url = section.settings.video_url | default: 'https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4' %}
+                         {% if video_url != blank %}
+                           <video
+                             class="simple-video"
+                             controls
+                             preload="metadata"
+                             style="width: 100%; height: 100%; object-fit: cover; border-radius: {{ section.settings.video_border_radius }}px;"
+                           >
+                             <source src="{{ video_url }}" type="video/mp4">
+                             Your browser does not support the video tag.
+                           </video>
+                         {% else %}
+                           <img src="https://dummyimage.com/600x400/cccccc/666666&text=Video+Placeholder" alt="Video Placeholder" style="width: 100%; height: 100%; object-fit: cover; border-radius: {{ section.settings.video_border_radius }}px;" />
+                         {% endif %}
+          </div>
+        </div>
+        
+        {% for block in section.blocks %}
+          {% if block.type == 'small_item' %}
+            <div class="content-left-item-small">
+                             <div class="rh-icon">
+                 {% if block.settings.icon %}
+                   <img src="{{ block.settings.icon | image_url: width: 60, height: 60 }}" alt="{{ block.settings.title }}" />
+                 {% else %}
+                   <img src="https://dummyimage.com/60x60/0b5431/ffffff&text=Icon" alt="icon" />
+                 {% endif %}
+               </div>
+              <div class="rh-text">
+                <h3 class="rh-title">{{ block.settings.title | default: 'Prove your progress' }}</h3>
+                <p class="rh-desc">{{ block.settings.description | default: 'All our courses come with certificates of completion.' }}</p>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      
+      <div class="content-right">
+        <div class="content-right-item">
+                     <div class="rh-icon">
+             {% if section.settings.right_item_icon %}
+               <img src="{{ section.settings.right_item_icon | image_url: width: 60, height: 60 }}" alt="{{ section.settings.right_item_title }}" />
+             {% else %}
+               <img src="https://dummyimage.com/60x60/0b5431/ffffff&text=Icon" alt="icon" />
+             {% endif %}
+           </div>
+          <div class="rh-text">
+            <h3 class="rh-title">{{ section.settings.right_item_title | default: 'All-Access Subscription' }}</h3>
+            <p class="rh-desc">{{ section.settings.right_item_description | default: 'Get full access to all our current and future courses, as long as you have an active subscription.' }}</p>
+          </div>
+        </div>
+                 <div class="content-right-image">
+           {% if section.settings.right_image %}
+             <img src="{{ section.settings.right_image | image_url: width: 400, height: 300 }}" alt="{{ section.settings.right_item_title }}">
+           {% else %}
+             <img src="https://dummyimage.com/400x300/cccccc/666666&text=Content+Image" alt="Content Right">
+           {% endif %}
+         </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+{% schema %}
+{
+  "name": "Our Tools Section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#0b5431"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 20,
+      "max": 120,
+      "step": 10,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 60
+    },
+         {
+       "type": "range",
+       "id": "padding_bottom",
+       "min": 20,
+       "max": 120,
+       "step": 10,
+       "unit": "px",
+       "label": "Bottom Padding",
+       "default": 60
+     },
+     {
+       "type": "header",
+       "content": "Color Settings"
+     },
+     {
+       "type": "color",
+       "id": "header_title_color",
+       "label": "Header Title Color",
+       "default": "#ffffff"
+     },
+     {
+       "type": "color",
+       "id": "header_description_color",
+       "label": "Header Description Color",
+       "default": "#ffffff"
+     },
+     {
+       "type": "color",
+       "id": "card_background_color",
+       "label": "Card Background Color",
+       "default": "#ffffff"
+     },
+     {
+       "type": "color",
+       "id": "card_title_color",
+       "label": "Card Title Color",
+       "default": "#272727"
+     },
+     {
+       "type": "color",
+       "id": "card_description_color",
+       "label": "Card Description Color",
+       "default": "#272727CC"
+     },
+     {
+       "type": "color",
+       "id": "play_button_background_color",
+       "label": "Play Button Background",
+       "default": "#ffffff"
+     },
+     {
+       "type": "color",
+       "id": "play_button_hover_background_color",
+       "label": "Play Button Hover Background",
+       "default": "#ffffff"
+     },
+     {
+       "type": "color",
+       "id": "play_button_icon_color",
+       "label": "Play Button Icon Color",
+       "default": "#0b5431"
+     },
+     {
+       "type": "color",
+       "id": "video_overlay_color",
+       "label": "Video Overlay Color",
+       "default": "#000000"
+     },
+     {
+       "type": "header",
+       "content": "Border Radius Settings"
+     },
+     {
+       "type": "range",
+       "id": "card_border_radius",
+       "min": 0,
+       "max": 20,
+       "step": 1,
+       "unit": "px",
+       "label": "Card Border Radius",
+       "default": 8
+     },
+     {
+       "type": "range",
+       "id": "video_border_radius",
+       "min": 0,
+       "max": 20,
+       "step": 1,
+       "unit": "px",
+       "label": "Video Border Radius",
+       "default": 8
+     },
+     {
+       "type": "range",
+       "id": "image_border_radius",
+       "min": 0,
+       "max": 20,
+       "step": 1,
+       "unit": "px",
+       "label": "Image Border Radius",
+       "default": 6
+     },
+    {
+      "type": "header",
+      "content": "Header Content"
+    },
+    {
+      "type": "text",
+      "id": "header_title",
+      "label": "Header Title",
+      "default": "You got your goal, we got the tools"
+    },
+    {
+      "type": "textarea",
+      "id": "header_description",
+      "label": "Header Description",
+      "default": "Giving you the best learning experience possible"
+    },
+    {
+      "type": "header",
+      "content": "Big Item Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "big_item_icon",
+      "label": "Big Item Icon"
+    },
+    {
+      "type": "text",
+      "id": "big_item_title",
+      "label": "Big Item Title",
+      "default": "Interactive, not reactive"
+    },
+    {
+      "type": "textarea",
+      "id": "big_item_description",
+      "label": "Big Item Description",
+      "default": "Our courses come with plenty of practical examples, assignments, quizzes & demos."
+    },
+         {
+       "type": "image_picker",
+       "id": "big_item_image",
+       "label": "Big Item Image"
+     },
+           {
+        "type": "video",
+        "id": "video_file",
+        "label": "Upload Video",
+        "info": "Upload your video file (MP4 recommended)"
+      },
+      {
+        "type": "url",
+        "id": "video_url",
+        "label": "Video URL (Alternative)",
+        "info": "Or enter the URL of your video file (MP4 recommended)"
+      },
+    {
+      "type": "header",
+      "content": "Right Side Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "right_item_icon",
+      "label": "Right Item Icon"
+    },
+    {
+      "type": "text",
+      "id": "right_item_title",
+      "label": "Right Item Title",
+      "default": "All-Access Subscription"
+    },
+    {
+      "type": "textarea",
+      "id": "right_item_description",
+      "label": "Right Item Description",
+      "default": "Get full access to all our current and future courses, as long as you have an active subscription."
+    },
+    {
+      "type": "image_picker",
+      "id": "right_image",
+      "label": "Right Side Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "small_item",
+      "name": "Small Item",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Prove your progress"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "All our courses come with certificates of completion."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Our Tools Section",
+      "blocks": [
+        {
+          "type": "small_item",
+          "settings": {
+            "title": "Prove your progress",
+            "description": "All our courses come with certificates of completion."
+          }
+        },
+        {
+          "type": "small_item",
+          "settings": {
+            "title": "Up-to-date courses",
+            "description": "Technologies change all the time, we do our best to keep our content updated."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

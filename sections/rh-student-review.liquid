@@ -1,0 +1,776 @@
+{% style %}
+.rh-student-review-section {
+  background-color: {{ section.settings.background_color }};
+  padding: {{ section.settings.padding_top }}px 20px {{ section.settings.padding_bottom }}px;
+}
+
+/* Responsive breakpoints for review section padding */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .rh-student-review-section {
+    padding: {{ section.settings.padding_top | times: 0.8 | round }}px 20px {{ section.settings.padding_bottom | times: 0.8 | round }}px;
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 600px) {
+  .rh-student-review-section {
+    padding: {{ section.settings.padding_top | times: 0.7 | round }}px 20px {{ section.settings.padding_bottom | times: 0.7 | round }}px;
+  }
+}
+
+@media screen and (max-width: 599px) and (min-width: 480px) {
+  .rh-student-review-section {
+    padding: {{ section.settings.padding_top | times: 0.6 | round }}px 20px {{ section.settings.padding_bottom | times: 0.6 | round }}px;
+  }
+}
+
+@media screen and (max-width: 479px) and (min-width: 375px) {
+  .rh-student-review-section {
+    padding: {{ section.settings.padding_top | times: 0.5 | round }}px 20px {{ section.settings.padding_bottom | times: 0.5 | round }}px;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .rh-student-review-section {
+    padding: {{ section.settings.padding_top | times: 0.4 | round }}px 20px {{ section.settings.padding_bottom | times: 0.4 | round }}px;
+  }
+}
+
+@media screen and (max-width: 319px) {
+  .rh-student-review-section {
+    padding: {{ section.settings.padding_top | times: 0.3 | round }}px 20px {{ section.settings.padding_bottom | times: 0.3 | round }}px;
+  }
+}
+
+.rh-student-review-section .container_rh {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.rh-student-review-section .rh-student-review-header {
+  max-width: 802px;
+  margin: 0 auto 48px;
+}
+
+/* Responsive breakpoints for review section header container */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .rh-student-review-section .rh-student-review-header {
+    max-width: 700px;
+    margin: 0 auto 40px;
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 600px) {
+  .rh-student-review-section .rh-student-review-header {
+    max-width: 600px;
+    margin: 0 auto 36px;
+  }
+}
+
+@media screen and (max-width: 599px) and (min-width: 480px) {
+  .rh-student-review-section .rh-student-review-header {
+    max-width: 500px;
+    margin: 0 auto 32px;
+  }
+}
+
+@media screen and (max-width: 479px) and (min-width: 375px) {
+  .rh-student-review-section .rh-student-review-header {
+    max-width: 400px;
+    margin: 0 auto 28px;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .rh-student-review-section .rh-student-review-header {
+    max-width: 350px;
+    margin: 0 auto 24px;
+  }
+}
+
+@media screen and (max-width: 319px) {
+  .rh-student-review-section .rh-student-review-header {
+    max-width: 300px;
+    margin: 0 auto 20px;
+  }
+}
+
+.rh-student-review-section .rh-student-review-header .rh-header-title {
+  color: {{ section.settings.header_title_color }};
+  font-size: 50px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  line-height: 120%;
+  text-align: center;
+  margin: 0;
+}
+
+/* Responsive breakpoints for review section header title */
+@media screen and (max-width: 1439px) and (min-width: 1200px) {
+  .rh-student-review-section .rh-student-review-header .rh-header-title {
+    font-size: 44px;
+  }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 1024px) {
+  .rh-student-review-section .rh-student-review-header .rh-header-title {
+    font-size: 40px;
+  }
+}
+
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .rh-student-review-section .rh-student-review-header .rh-header-title {
+    font-size: 36px;
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 600px) {
+  .rh-student-review-section .rh-student-review-header .rh-header-title {
+    font-size: 32px;
+  }
+}
+
+@media screen and (max-width: 599px) and (min-width: 480px) {
+  .rh-student-review-section .rh-student-review-header .rh-header-title {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 479px) and (min-width: 375px) {
+  .rh-student-review-section .rh-student-review-header .rh-header-title {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .rh-student-review-section .rh-student-review-header .rh-header-title {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 319px) {
+  .rh-student-review-section .rh-student-review-header .rh-header-title {
+    font-size: 20px;
+  }
+}
+
+.rh-student-review-section .container_rh .rh-student-review-cards {
+  position: relative;
+}
+
+/* Swiper container styles */
+.review-swiper {
+  padding: 0 0px 60px 0px !important;
+}
+
+/* Responsive breakpoints for review swiper padding */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .review-swiper {
+    padding: 0 0px 50px 0px !important;
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 600px) {
+  .review-swiper {
+    padding: 0 0px 45px 0px !important;
+  }
+}
+
+@media screen and (max-width: 599px) and (min-width: 480px) {
+  .review-swiper {
+    padding: 0 0px 40px 0px !important;
+  }
+}
+
+@media screen and (max-width: 479px) and (min-width: 375px) {
+  .review-swiper {
+    padding: 0 0px 35px 0px !important;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .review-swiper {
+    padding: 0 0px 30px 0px !important;
+  }
+}
+
+@media screen and (max-width: 319px) {
+  .review-swiper {
+    padding: 0 0px 25px 0px !important;
+  }
+}
+
+/* Swiper pagination */
+.swiper-pagination {
+  bottom: 20px !important;
+  position: relative !important;
+  margin-top: 30px !important;
+}
+
+.swiper-pagination-bullet {
+  width: 10px !important;
+  height: 10px !important;
+  background: {{ section.settings.pagination_inactive_color }} !important;
+  opacity: 1 !important;
+  transition: all 0.3s ease !important;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: {{ section.settings.pagination_active_color }} !important;
+  transform: scale(1.2) !important;
+}
+
+/* Ensure proper spacing for review cards container */
+.rh-student-review-section .container_rh .rh-student-review-cards {
+  position: relative !important;
+  padding-bottom: 20px !important;
+}
+
+/* Swiper slide styles */
+.swiper-slide {
+  height: auto;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: stretch !important;
+}
+
+.swiper-slide .rh-review-card {
+  margin: 0;
+}
+
+/* Student Review Card Styles */
+.rh-review-card {
+  background: {{ section.settings.card_background_color }};
+  overflow: hidden;
+  border-radius: {{ section.settings.card_border_radius }}px;
+  outline: 1.03px {{ section.settings.card_border_color }} solid;
+  outline-offset: -1.03px;
+  padding: 33.04px;
+  width: 100%;
+  max-width: 413px;
+  cursor: pointer;
+}
+
+.rh-review-card:hover {
+  outline: 1px {{ section.settings.card_hover_border_color }} solid;
+}
+
+.rh-review-stars {
+  display: flex;
+  align-items: flex-start;
+  gap: 4.13px;
+  margin-bottom: 16px;
+}
+
+.rh-review-star {
+  width: 24.78px;
+  height: 24.78px;
+  position: relative;
+}
+
+.rh-review-star svg {
+  width: 100%;
+  height: 100%;
+  fill: {{ section.settings.star_inactive_color }};
+}
+
+.rh-review-star .star-fill {
+  fill: {{ section.settings.star_active_color }};
+  transition: fill 0.3s ease;
+}
+
+.rh-review-star .star-outline {
+  fill: {{ section.settings.star_inactive_color }};
+  transition: fill 0.3s ease;
+}
+
+.rh-review-content {
+  color: {{ section.settings.review_text_color }};
+  font-size: 18px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 28.91px;
+  word-wrap: break-word;
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+.rh-review-author {
+  display: flex;
+  align-items: center;
+  gap: 16.52px;
+}
+
+.rh-review-author-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 49.56px;
+  overflow: hidden;
+}
+
+.rh-review-author-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rh-review-author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.03px;
+}
+
+.rh-review-author-name {
+  color: {{ section.settings.author_name_color }};
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  line-height: 24.78px;
+  word-wrap: break-word;
+  margin: 0;
+}
+
+.rh-review-author-position {
+  color: {{ section.settings.author_position_color }};
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 24.78px;
+  word-wrap: break-word;
+  margin: 0;
+}
+
+/* Responsive for review cards */
+@media screen and (max-width: 1439px) and (min-width: 1200px) {
+  .rh-review-card {
+    max-width: 380px;
+    padding: 28px;
+  }
+
+  .rh-review-content {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .rh-review-author-name,
+  .rh-review-author-position {
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 1024px) {
+  .rh-review-card {
+    max-width: 360px;
+    padding: 24px;
+  }
+
+  .rh-review-content {
+    font-size: 15px;
+    line-height: 24px;
+  }
+
+  .rh-review-author-name,
+  .rh-review-author-position {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .rh-review-card {
+    max-width: 340px;
+    padding: 20px;
+  }
+
+  .rh-review-content {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .rh-review-author-name,
+  .rh-review-author-position {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .rh-review-author-image {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+@media screen and (max-width: 767px) and (min-width: 600px) {
+  .rh-review-card {
+    max-width: 320px;
+    padding: 18px;
+  }
+
+  .rh-review-content {
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .rh-review-author-name,
+  .rh-review-author-position {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .rh-review-author-image {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (max-width: 599px) and (min-width: 480px) {
+  .rh-review-card {
+    max-width: 300px;
+    padding: 16px;
+  }
+
+  .rh-review-content {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .rh-review-author-name,
+  .rh-review-author-position {
+    font-size: 11px;
+    line-height: 14px;
+  }
+
+  .rh-review-author-image {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media screen and (max-width: 479px) and (min-width: 375px) {
+  .rh-review-card {
+    max-width: 280px;
+    padding: 14px;
+  }
+
+  .rh-review-content {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .rh-review-author-name,
+  .rh-review-author-position {
+    font-size: 10px;
+    line-height: 12px;
+  }
+
+  .rh-review-author-image {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .rh-review-card {
+    max-width: 260px;
+    padding: 12px;
+  }
+
+  .rh-review-content {
+    font-size: 10px;
+    line-height: 14px;
+  }
+
+  .rh-review-author-name,
+  .rh-review-author-position {
+    font-size: 9px;
+    line-height: 11px;
+  }
+
+  .rh-review-author-image {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media screen and (max-width: 319px) {
+  .rh-review-card {
+    max-width: 240px;
+    padding: 10px;
+  }
+
+  .rh-review-content {
+    font-size: 9px;
+    line-height: 12px;
+  }
+
+  .rh-review-author-name,
+  .rh-review-author-position {
+    font-size: 8px;
+    line-height: 10px;
+  }
+
+  .rh-review-author-image {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+{% endstyle %}
+
+<div class="rh-student-review-section">
+  <div class="container_rh">
+    <div class="rh-student-review-header">
+      <h2 class="rh-header-title">
+        {{ section.settings.header_title | default: "Don't take our word for it! Hear what our students are saying." }}
+      </h2>
+    </div>
+    <div class="rh-student-review-cards">
+      <div class="swiper review-swiper">
+        <div class="swiper-wrapper">
+          {% for block in section.blocks %}
+            {% if block.type == 'review' %}
+              <div class="swiper-slide">
+                <div class="rh-review-card">
+                  <div class="rh-review-stars" data-rating="{{ block.settings.rating | default: 5 }}">
+                    {% assign rating = block.settings.rating | default: 5 %}
+                    {% for i in (1..5) %}
+                      <div class="rh-review-star">
+                        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path class="{% if i <= rating %}star-fill{% else %}star-outline{% endif %}" d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                        </svg>
+                      </div>
+                    {% endfor %}
+                  </div>
+                  <div class="rh-review-content">
+                    "{{ block.settings.review_text | default: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.' }}"
+                  </div>
+                  <div class="rh-review-author">
+                    <div class="rh-review-author-image">
+                      {% if block.settings.author_image %}
+                        <img src="{{ block.settings.author_image | image_url: width: 50, height: 50 }}" alt="{{ block.settings.author_name }}" />
+                      {% else %}
+                        <img src="https://dummyimage.com/50x50/cccccc/666666&text=Avatar" alt="{{ block.settings.author_name }}" />
+                      {% endif %}
+                    </div>
+                    <div class="rh-review-author-info">
+                      <div class="rh-review-author-name">{{ block.settings.author_name | default: 'Student Name' }}</div>
+                      <div class="rh-review-author-position">{{ block.settings.author_position | default: 'Position, Company name' }}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        <!-- Pagination dots -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Student Reviews Section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 20,
+      "max": 150,
+      "step": 10,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 20,
+      "max": 150,
+      "step": 10,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 100
+    },
+    {
+      "type": "header",
+      "content": "Header Content"
+    },
+    {
+      "type": "text",
+      "id": "header_title",
+      "label": "Header Title",
+      "default": "Don't take our word for it! Hear what our students are saying."
+    },
+    {
+      "type": "header",
+      "content": "Color Settings"
+    },
+    {
+      "type": "color",
+      "id": "header_title_color",
+      "label": "Header Title Color",
+      "default": "#272727"
+    },
+    {
+      "type": "color",
+      "id": "card_background_color",
+      "label": "Card Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "card_border_color",
+      "label": "Card Border Color",
+      "default": "#e6faf1"
+    },
+    {
+      "type": "color",
+      "id": "card_hover_border_color",
+      "label": "Card Hover Border Color",
+      "default": "#05ce78"
+    },
+    {
+      "type": "color",
+      "id": "review_text_color",
+      "label": "Review Text Color",
+      "default": "#272727"
+    },
+    {
+      "type": "color",
+      "id": "author_name_color",
+      "label": "Author Name Color",
+      "default": "#272727"
+    },
+    {
+      "type": "color",
+      "id": "author_position_color",
+      "label": "Author Position Color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "star_active_color",
+      "label": "Star Active Color",
+      "default": "#05ce78"
+    },
+    {
+      "type": "color",
+      "id": "star_inactive_color",
+      "label": "Star Inactive Color",
+      "default": "#e5e7eb"
+    },
+    {
+      "type": "color",
+      "id": "pagination_active_color",
+      "label": "Pagination Active Color",
+      "default": "#05ce78"
+    },
+    {
+      "type": "color",
+      "id": "pagination_inactive_color",
+      "label": "Pagination Inactive Color",
+      "default": "#e5e7eb"
+    },
+    {
+      "type": "header",
+      "content": "Border Radius Settings"
+    },
+    {
+      "type": "range",
+      "id": "card_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Card Border Radius",
+      "default": 8
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type": "range",
+          "id": "rating",
+          "min": 1,
+          "max": 5,
+          "step": 0.5,
+          "label": "Rating",
+          "default": 5
+        },
+        {
+          "type": "textarea",
+          "id": "review_text",
+          "label": "Review Text",
+          "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."
+        },
+        {
+          "type": "image_picker",
+          "id": "author_image",
+          "label": "Author Image"
+        },
+        {
+          "type": "text",
+          "id": "author_name",
+          "label": "Author Name",
+          "default": "Student Name"
+        },
+        {
+          "type": "text",
+          "id": "author_position",
+          "label": "Author Position",
+          "default": "Position, Company name"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Student Reviews Section",
+      "blocks": [
+        {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "author_name": "Orlando Diggs",
+            "author_position": "Position, Company name"
+          }
+        },
+                 {
+           "type": "review",
+           "settings": {
+             "rating": 5.0,
+             "review_text": "The courses here are absolutely amazing! I learned more in 3 months than I did in 2 years of college. The instructors are knowledgeable and the community is supportive.",
+             "author_name": "Sarah Johnson",
+             "author_position": "Frontend Developer, TechCorp"
+           }
+         },
+         {
+           "type": "review",
+           "settings": {
+             "rating": 5.0,
+             "review_text": "E-Learn transformed my career! The practical projects and real-world examples helped me land my dream job. Highly recommended for anyone serious about learning.",
+             "author_name": "Michael Chen",
+             "author_position": "Data Scientist, InnovateLab"
+           }
+         }
+      ]
+    }
+  ]
+}
+{% endschema %}

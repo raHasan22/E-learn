@@ -1,0 +1,609 @@
+{% style %}
+
+.rh-delevered-way-section {
+  background-color: {{ section.settings.background_color }};
+  padding: {{ section.settings.padding_top }}px 20px {{ section.settings.padding_bottom }}px;
+}
+.rh-delevered-way-section .container_rh {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.rh-delevered-way-section .container_rh .rh-delevered-way-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 0 0 48px;
+}
+
+.rh-delevered-way-section
+  .container_rh
+  .rh-delevered-way-header
+  .rh-header-title {
+  color: {{ section.settings.header_title_color }};
+  font-size: 50px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  line-height: 120%;
+  text-align: center;
+  margin: 0;
+}
+
+.rh-delevered-way-section
+  .container_rh
+  .rh-delevered-way-header
+  .rh-header-desc {
+  color: {{ section.settings.header_description_color }};
+  font-size: 20px;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  line-height: 140%;
+  text-align: center;
+  margin: 0;
+}
+.rh-delevered-way-section .container_rh .rh-delevered-way-cards {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* New CSS classes for the delivered way card */
+.rh-delivered-card {
+  position: relative;
+  background: {{ section.settings.card_background_color }};
+  border-radius: {{ section.settings.card_border_radius }}px;
+  border: 1px solid {{ section.settings.card_border_color }};
+  padding: 30px 24px;
+  max-width: 413px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.rh-delivered-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px {{ section.settings.card_hover_shadow_color }};
+  border-color: {{ section.settings.card_hover_border_color }};
+}
+
+.rh-delivered-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.rh-delivered-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.rh-delivered-card-icon {
+  width: 52px;
+  height: 52px;
+}
+
+.rh-delivered-card-icon img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.rh-delivered-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.rh-delivered-card-title {
+  color: {{ section.settings.card_title_color }};
+  font-size: 30px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  line-height: 45px;
+  word-wrap: break-word;
+  margin: 0;
+}
+
+.rh-delivered-card-description {
+  color: {{ section.settings.card_description_color }};
+  font-size: 18px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  line-height: 28.8px;
+  word-wrap: break-word;
+  margin: 0;
+}
+
+.rh-delivered-card-button {
+  padding: 12px 30px;
+  background: {{ section.settings.button_background_color }};
+  border-radius: {{ section.settings.button_border_radius }}px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  min-height: 48px;
+  width: fit-content;
+}
+
+.rh-delivered-card-button:hover {
+  background: {{ section.settings.button_hover_background_color }};
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px {{ section.settings.button_hover_shadow_color }};
+}
+
+.rh-delivered-card-button-text {
+  color: {{ section.settings.button_text_color }};
+  font-size: 18px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  line-height: 130%;
+  text-decoration: none;
+  margin: 0;
+}
+
+/* Responsive styles for the delivered way section */
+@media screen and (max-width: 1023px) {
+  .rh-delevered-way-section {
+    padding: {{ section.settings.padding_top | times: 0.8 | round }}px 20px {{ section.settings.padding_bottom | times: 0.8 | round }}px;
+  }
+
+  .rh-delevered-way-section .container_rh .rh-delevered-way-header .rh-header-title {
+    font-size: 42px;
+  }
+
+  .rh-delevered-way-section .container_rh .rh-delevered-way-header .rh-header-desc {
+    font-size: 18px;
+  }
+
+  .rh-delevered-way-section .container_rh .rh-delevered-way-cards {
+    gap: 24px;
+  }
+
+  .rh-delivered-card {
+    max-width: 380px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .rh-delevered-way-section {
+    padding: {{ section.settings.padding_top | times: 0.6 | round }}px 16px {{ section.settings.padding_bottom | times: 0.6 | round }}px;
+  }
+
+  .rh-delevered-way-section .container_rh .rh-delevered-way-header {
+    margin: 0 0 40px;
+  }
+
+  .rh-delevered-way-section .container_rh .rh-delevered-way-header .rh-header-title {
+    font-size: 36px;
+  }
+
+  .rh-delevered-way-section .container_rh .rh-delevered-way-header .rh-header-desc {
+    font-size: 16px;
+  }
+
+  .rh-delevered-way-section .container_rh .rh-delevered-way-cards {
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rh-delivered-card {
+    max-width: 100%;
+    width: 100%;
+    margin: 0;
+  }
+
+  .rh-delivered-card-title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .rh-delivered-card-description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .rh-delivered-card-button {
+    width: fit-content;
+    max-width: 180px;
+    padding: 10px 20px;
+    min-height: 42px;
+  }
+
+  .rh-delivered-card-button-text {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .rh-delevered-way-section {
+    padding: {{ section.settings.padding_top | times: 0.4 | round }}px 12px {{ section.settings.padding_bottom | times: 0.4 | round }}px;
+  }
+
+  .rh-delevered-way-section .container_rh .rh-delevered-way-header {
+    margin: 0 0 32px;
+    gap: 12px;
+  }
+
+  .rh-delevered-way-section .container_rh .rh-delevered-way-header .rh-header-title {
+    font-size: 28px;
+  }
+
+  .rh-delevered-way-section .container_rh .rh-delevered-way-header .rh-header-desc {
+    font-size: 14px;
+  }
+
+  .rh-delevered-way-section .container_rh .rh-delevered-way-cards {
+    gap: 16px;
+  }
+
+  .rh-delivered-card {
+    padding: 24px 20px;
+  }
+
+  .rh-delivered-card-content {
+    gap: 24px;
+  }
+
+  .rh-delivered-card-header {
+    gap: 20px;
+  }
+
+  .rh-delivered-card-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .rh-delivered-card-title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .rh-delivered-card-description {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .rh-delivered-card-button {
+    padding: 8px 16px;
+    min-height: 40px;
+    width: fit-content;
+    max-width: 160px;
+  }
+
+  .rh-delivered-card-button-text {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .rh-delevered-way-section {
+    padding: {{ section.settings.padding_top | times: 0.32 | round }}px 8px {{ section.settings.padding_bottom | times: 0.32 | round }}px;
+  }
+
+  .rh-delevered-way-section .container_rh .rh-delevered-way-header .rh-header-title {
+    font-size: 24px;
+  }
+
+  .rh-delevered-way-section .container_rh .rh-delevered-way-header .rh-header-desc {
+    font-size: 13px;
+  }
+
+  .rh-delivered-card {
+    padding: 20px 16px;
+  }
+
+  .rh-delivered-card-content {
+    gap: 20px;
+  }
+
+  .rh-delivered-card-header {
+    gap: 16px;
+  }
+
+  .rh-delivered-card-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .rh-delivered-card-title {
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .rh-delivered-card-description {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  .rh-delivered-card-button {
+    padding: 6px 12px;
+    min-height: 36px;
+    width: fit-content;
+    max-width: 140px;
+  }
+
+  .rh-delivered-card-button-text {
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+
+{% endstyle %}
+
+<div class="rh-delevered-way-section">
+      <div class="container_rh">
+        <div class="rh-delevered-way-header">
+          <h2 class="rh-header-title">{{ section.settings.header_title | default: 'Courses, delivered your way' }}</h2>
+          <p class="rh-header-desc">{{ section.settings.header_description | default: 'Choose the learning path that works best for you' }}</p>
+        </div>
+        <div class="rh-delevered-way-cards">
+          {% for block in section.blocks %}
+            {% if block.type == 'delivery_card' %}
+              <div class="rh-delivered-card" {{ block.shopify_attributes }}>
+                <div class="rh-delivered-card-content">
+                  <div class="rh-delivered-card-header">
+                    <div class="rh-delivered-card-icon">
+                      {% if block.settings.icon %}
+                        <img src="{{ block.settings.icon | image_url: width: 52, height: 52 }}" alt="{{ block.settings.title }}" />
+                      {% else %}
+                        <img src="https://dummyimage.com/52x52/0b5431/ffffff&text=Icon" alt="icon" />
+                      {% endif %}
+                    </div>
+                    <div class="rh-delivered-card-text">
+                      <div class="rh-delivered-card-title">
+                        {{ block.settings.title | default: 'Card Title' }}
+                      </div>
+                      <div class="rh-delivered-card-description">
+                        {{ block.settings.description | default: 'Card description goes here' }}
+                      </div>
+                    </div>
+                  </div>
+                  {% if block.settings.button_text != blank and block.settings.button_url != blank %}
+                    <a href="{{ block.settings.button_url }}" class="rh-delivered-card-button">
+                      <span class="rh-delivered-card-button-text">{{ block.settings.button_text }}</span>
+                    </a>
+                  {% elsif block.settings.button_text != blank %}
+                    <div class="rh-delivered-card-button">
+                      <div class="rh-delivered-card-button-text">{{ block.settings.button_text }}</div>
+                    </div>
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+{% schema %}
+{
+  "name": "Delivered Way Section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Settings"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 20,
+      "max": 120,
+      "step": 10,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 100
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 20,
+      "max": 120,
+      "step": 10,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 100
+    },
+    {
+      "type": "header",
+      "content": "Header Content"
+    },
+    {
+      "type": "text",
+      "id": "header_title",
+      "label": "Header Title",
+      "default": "Courses, delivered your way"
+    },
+    {
+      "type": "textarea",
+      "id": "header_description",
+      "label": "Header Description",
+      "default": "Choose the learning path that works best for you"
+    },
+    {
+      "type": "header",
+      "content": "Color Settings"
+    },
+    {
+      "type": "color",
+      "id": "header_title_color",
+      "label": "Header Title Color",
+      "default": "#272727"
+    },
+    {
+      "type": "color",
+      "id": "header_description_color",
+      "label": "Header Description Color",
+      "default": "#272727cc"
+    },
+    {
+      "type": "color",
+      "id": "card_background_color",
+      "label": "Card Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "card_border_color",
+      "label": "Card Border Color",
+      "default": "#e6faf1"
+    },
+    {
+      "type": "color",
+      "id": "card_hover_border_color",
+      "label": "Card Hover Border Color",
+      "default": "#05ce78"
+    },
+    {
+      "type": "color",
+      "id": "card_hover_shadow_color",
+      "label": "Card Hover Shadow Color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "card_title_color",
+      "label": "Card Title Color",
+      "default": "#272727"
+    },
+    {
+      "type": "color",
+      "id": "card_description_color",
+      "label": "Card Description Color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "label": "Button Background Color",
+      "default": "#05ce78"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_background_color",
+      "label": "Button Hover Background Color",
+      "default": "#04b868"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_shadow_color",
+      "label": "Button Hover Shadow Color",
+      "default": "#05ce78"
+    },
+    {
+      "type": "header",
+      "content": "Border Radius Settings"
+    },
+    {
+      "type": "range",
+      "id": "card_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Card Border Radius",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Button Border Radius",
+      "default": 6
+    }
+  ],
+  "blocks": [
+    {
+      "type": "delivery_card",
+      "name": "Delivery Card",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Card Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Card Title",
+          "default": "All-Access Subscription"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Card Description",
+          "default": "Get full access to all our current and future courses, as long as you have an active subscription."
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Learn More"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Delivered Way Section",
+      "blocks": [
+        {
+          "type": "delivery_card",
+          "settings": {
+            "title": "All-Access Subscription",
+            "description": "Get full access to all our current and future courses, as long as you have an active subscription.",
+            "button_text": "Learn More"
+          }
+        },
+        {
+          "type": "delivery_card",
+          "settings": {
+            "title": "Single-Course Purchase",
+            "description": "Buy individual courses once and get lifetime access to them - without any recurring fees.",
+            "button_text": "Explore Courses"
+          }
+        },
+        {
+          "type": "delivery_card",
+          "settings": {
+            "title": "Free Tutorials",
+            "description": "Learn more about specific topics with our free tutorial articles or YouTube videos.",
+            "button_text": "Explore Courses"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

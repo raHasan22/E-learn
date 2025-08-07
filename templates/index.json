@@ -251,11 +251,240 @@
         "duration_text_color": "#05ce78",
         "image_bottom_border_color": "#05ce78"
       }
+    },
+    "rh_hour_tools_QYaeFF": {
+      "type": "rh-hour-tools",
+      "blocks": {
+        "small_item_YrmwQX": {
+          "type": "small_item",
+          "settings": {
+            "icon": "shopify://shop_images/grad-icon-bg.png",
+            "title": "Prove your progress",
+            "description": "All our courses come with certificates of completion."
+          }
+        },
+        "small_item_UzRkiY": {
+          "type": "small_item",
+          "settings": {
+            "icon": "shopify://shop_images/clock-icon-bg.png",
+            "title": "Up-to-date courses",
+            "description": "Technologies change all the time, we do our best to keep our content updated."
+          }
+        }
+      },
+      "block_order": [
+        "small_item_YrmwQX",
+        "small_item_UzRkiY"
+      ],
+      "name": "Our Tools Section",
+      "settings": {
+        "background_color": "#0b5431",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "header_title_color": "#ffffff",
+        "header_description_color": "#ffffff",
+        "card_background_color": "#ffffff",
+        "card_title_color": "#272727",
+        "card_description_color": "#272727cc",
+        "play_button_background_color": "#ffffffe6",
+        "play_button_hover_background_color": "#ffffff",
+        "play_button_icon_color": "#0b5431",
+        "video_overlay_color": "#0000004d",
+        "card_border_radius": 8,
+        "video_border_radius": 8,
+        "image_border_radius": 6,
+        "header_title": "You got your goal, we got the tools",
+        "header_description": "Giving you the best learning experience possible",
+        "big_item_icon": "shopify://shop_images/play-icon-bg.png",
+        "big_item_title": "Interactive, not reactive",
+        "big_item_description": "Our courses come with plenty of practical examples, assignments, quizzes & demos.",
+        "big_item_image": "shopify://shop_images/future-artificial-intelligence-robot.png",
+        "video_file": "shopify://files/videos/openai.mp4",
+        "video_url": "",
+        "right_item_icon": "shopify://shop_images/check-icon-bg.png",
+        "right_item_title": "All-Access Subscription",
+        "right_item_description": "Get full access to all our current and future courses, as long as you have an active subscription.",
+        "right_image": "shopify://shop_images/content-right.png"
+      }
+    },
+    "rh_student_review_KUaqUm": {
+      "type": "rh-student-review",
+      "blocks": {
+        "review_q9Vyrf": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "author_image": "shopify://shop_images/image_2.png",
+            "author_name": "Orlando Diggs",
+            "author_position": "Position, Company name"
+          }
+        },
+        "review_W8Mtnw": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review_text": "The courses here are absolutely amazing! I learned more in 3 months than I did in 2 years of college. The instructors are knowledgeable and the community is supportive.",
+            "author_image": "shopify://shop_images/image_3.png",
+            "author_name": "Sarah Johnson",
+            "author_position": "Frontend Developer, TechCorp"
+          }
+        },
+        "review_iETMn4": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review_text": "E-Learn transformed my career! The practical projects and real-world examples helped me land my dream job. Highly recommended for anyone serious about learning.",
+            "author_image": "shopify://shop_images/image_4.png",
+            "author_name": "Michael Chen",
+            "author_position": "Data Scientist, InnovateLab"
+          }
+        }
+      },
+      "block_order": [
+        "review_q9Vyrf",
+        "review_W8Mtnw",
+        "review_iETMn4"
+      ],
+      "name": "Student Reviews Section",
+      "settings": {
+        "background_color": "#ffffff",
+        "padding_top": 100,
+        "padding_bottom": 50,
+        "header_title": "Don't take our word for it! Hear what our students are saying.",
+        "header_title_color": "#272727",
+        "card_background_color": "#ffffff",
+        "card_border_color": "#e6faf1",
+        "card_hover_border_color": "#05ce78",
+        "review_text_color": "#272727",
+        "author_name_color": "#272727",
+        "author_position_color": "#666666",
+        "star_active_color": "#05ce78",
+        "star_inactive_color": "#e5e7eb",
+        "pagination_active_color": "#05ce78",
+        "pagination_inactive_color": "#e5e7eb",
+        "card_border_radius": 8
+      }
+    },
+    "rh_delevered_way_3APWDX": {
+      "type": "rh-delevered-way",
+      "blocks": {
+        "delivery_card_dyXVwh": {
+          "type": "delivery_card",
+          "settings": {
+            "icon": "shopify://shop_images/book.png",
+            "title": "All-Access Subscription",
+            "description": "Get full access to all our current and future courses, as long as you have an active subscription.",
+            "button_text": "Learn More",
+            "button_url": ""
+          }
+        },
+        "delivery_card_RdbqFU": {
+          "type": "delivery_card",
+          "settings": {
+            "icon": "shopify://shop_images/graguate.png",
+            "title": "Single-Course Purchase",
+            "description": "Buy individual courses once and get lifetime access to them - without any recurring fees.",
+            "button_text": "Explore Courses",
+            "button_url": ""
+          }
+        },
+        "delivery_card_RCeJ3X": {
+          "type": "delivery_card",
+          "settings": {
+            "icon": "shopify://shop_images/play-icon.png",
+            "title": "Free Tutorials",
+            "description": "Learn more about specific topics with our free tutorial articles or YouTube videos.",
+            "button_text": "Explore Courses",
+            "button_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "delivery_card_dyXVwh",
+        "delivery_card_RdbqFU",
+        "delivery_card_RCeJ3X"
+      ],
+      "name": "Delivered Way Section",
+      "settings": {
+        "background_color": "#ffffff",
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "header_title": "Courses, delivered your way",
+        "header_description": "Choose the learning path that works best for you",
+        "header_title_color": "#272727",
+        "header_description_color": "#272727cc",
+        "card_background_color": "#ffffff",
+        "card_border_color": "#e6faf1",
+        "card_hover_border_color": "#05ce78",
+        "card_hover_shadow_color": "#000000",
+        "card_title_color": "#272727",
+        "card_description_color": "#666666",
+        "button_background_color": "#05ce78",
+        "button_hover_background_color": "#04b868",
+        "button_text_color": "#ffffff",
+        "button_hover_shadow_color": "#05ce78",
+        "card_border_radius": 8,
+        "button_border_radius": 6
+      }
+    },
+    "rh_meet_our_sec_QMWDYB": {
+      "type": "rh-meet-our-sec",
+      "blocks": {
+        "instructor_Kq6xB6": {
+          "type": "instructor",
+          "settings": {
+            "image": "shopify://shop_images/Mask_group_3.png",
+            "name": "Maximilian Schwarzmüller",
+            "title": "Founder & Instructor",
+            "linkedin_url": "#",
+            "twitter_url": "#",
+            "facebook_url": "#"
+          }
+        },
+        "instructor_wA9bkn": {
+          "type": "instructor",
+          "settings": {
+            "image": "shopify://shop_images/Mask_group_4.png",
+            "name": "Manuel Lorenz",
+            "title": "Co-Founder & Instructor",
+            "linkedin_url": "#",
+            "twitter_url": "#",
+            "facebook_url": "#"
+          }
+        }
+      },
+      "block_order": [
+        "instructor_Kq6xB6",
+        "instructor_wA9bkn"
+      ],
+      "name": "Meet Our Team Section",
+      "settings": {
+        "background_color": "#ffffff",
+        "padding_top": 50,
+        "padding_bottom": 100,
+        "header_title": "Meet your instructors",
+        "header_description": "All our courses are taught by us - Max & Manuel. Because we love what we do.",
+        "header_title_color": "#272727",
+        "header_description_color": "#666666",
+        "card_background_color": "#e6faf1",
+        "card_hover_shadow_color": "#000000",
+        "instructor_name_color": "#272727",
+        "instructor_title_color": "#666666",
+        "social_icon_hover_background_color": "#666666",
+        "image_background_color": "#d9d9d9",
+        "card_border_radius": 8,
+        "image_border_radius": 8
+      }
     }
   },
   "order": [
     "rh_home_hero_PxPpAU",
     "rh_goals_section_bDWhRT",
-    "rh_home_courses_bMjNCn"
+    "rh_home_courses_bMjNCn",
+    "rh_hour_tools_QYaeFF",
+    "rh_student_review_KUaqUm",
+    "rh_delevered_way_3APWDX",
+    "rh_meet_our_sec_QMWDYB"
   ]
 }
