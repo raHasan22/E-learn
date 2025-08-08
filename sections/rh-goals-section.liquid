@@ -252,14 +252,12 @@
       <div class="rh-goals-header">
         <h2 class="goals-title">{{ section.settings.section_title }}</h2>
         <div class="goals-categories">
-          {% for block in section.blocks %}
-            {% case block.type %}
-              {% when 'category' %}
-                <span class="category-item">{{ block.settings.category_name }}</span>
-                {% unless forloop.last %}
-                  <span class="category-separator">|</span>
-                {% endunless %}
-            {% endcase %}
+          {% assign category_blocks = section.blocks | where: "type", "category" %}
+          {% for block in category_blocks %}
+            <span class="category-item">{{ block.settings.category_name }}</span>
+            {% unless forloop.last %}
+              <span class="category-separator">|</span>
+            {% endunless %}
           {% endfor %}
         </div>
       </div>

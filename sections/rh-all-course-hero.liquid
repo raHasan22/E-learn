@@ -1,0 +1,464 @@
+{% style %}
+    .rh-all-course-hero {
+  padding: {{ section.settings.padding_top | default: 100 }}px {{ section.settings.padding_horizontal | default: 20 }}px {{ section.settings.padding_bottom | default: 250 }}px;
+  {% if section.settings.background_image != blank %}
+    background: url({{ section.settings.background_image | image_url: width: 1920 }}) no-repeat center center;
+  {% else %}
+    background: #0b5431;
+  {% endif %}
+  background-size: cover;
+}
+.rh-all-course-hero .container_rh {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.rh-all-course-hero .section-title {
+  font-family: "Inter", sans-serif;
+  font-weight: {{ section.settings.title_font_weight | default: 700 }};
+  font-size: {{ section.settings.title_font_size | default: 56 }}px;
+  line-height: {{ section.settings.title_line_height | default: 120 }}%;
+  text-align: center;
+  text-transform: capitalize;
+  color: {{ section.settings.title_color | default: '#fff' }};
+  margin: 0 0 {{ section.settings.title_margin_bottom | default: 36 }}px;
+}
+.rh-all-course-hero .section-desc {
+  font-family: "Inter", sans-serif;
+  font-weight: {{ section.settings.description_font_weight | default: 400 }};
+  font-size: {{ section.settings.description_font_size | default: 20 }}px;
+  line-height: {{ section.settings.description_line_height | default: 150 }}%;
+  text-align: center;
+  color: {{ section.settings.description_color | default: '#fff' }};
+  margin: 0 0 {{ section.settings.description_margin_bottom | default: 30 }}px;
+}
+
+/* Responsive styles for hero section */
+@media screen and (max-width: 1024px) {
+  .rh-all-course-hero {
+    padding: 80px 20px 200px;
+  }
+  
+  .rh-all-course-hero .section-title {
+    font-size: 48px;
+  }
+  
+  .rh-all-course-hero .section-desc {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .rh-all-course-hero {
+    padding: 60px 20px 180px;
+  }
+  
+  .rh-all-course-hero .section-title {
+    font-size: 36px;
+    margin-bottom: 24px;
+  }
+  
+  .rh-all-course-hero .section-desc {
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .rh-all-course-hero {
+    padding: 40px 15px 160px;
+  }
+  
+  .rh-all-course-hero .section-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  .rh-all-course-hero .section-desc {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .rh-all-course-hero {
+    padding: 30px 10px 140px;
+  }
+  
+  .rh-all-course-hero .section-title {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+  
+  .rh-all-course-hero .section-desc {
+    font-size: 13px;
+    margin-bottom: 16px;
+  }
+}
+
+/* Search Form Styles */
+.rh-all-course-hero .rh-hero-search {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.rh-all-course-hero .rh-search-form {
+  width: 100%;
+}
+
+.rh-all-course-hero .rh-search-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 4px;
+  border: none;
+  outline: none;
+}
+
+.rh-all-course-hero .rh-search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 16px 20px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #070606CC;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+  margin: 0;
+  width: auto;
+  min-width: 0;
+}
+
+.rh-all-course-hero .rh-search-input::placeholder {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #070606CC;
+  opacity: 1;
+}
+
+.rh-all-course-hero .rh-search-btn {
+  background: {{ section.settings.button_color | default: '#05CE78' }};
+  border: none;
+  padding: 16px 24px;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 80px;
+  border-radius: 8px;
+  margin: 0;
+  box-shadow: none;
+  outline: none;
+  text-decoration: none;
+}
+
+.rh-all-course-hero .rh-search-btn:hover {
+  background: {{ section.settings.button_hover_color | default: '#04b368' }};
+}
+
+.rh-all-course-hero .rh-btn-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+}
+
+/* Responsive styles for search form */
+@media screen and (max-width: 1024px) {
+  .rh-all-course-hero .rh-hero-search {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .rh-all-course-hero .rh-hero-search {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  
+  .rh-all-course-hero .rh-search-input {
+    padding: 14px 16px;
+    font-size: 14px;
+  }
+  
+  .rh-all-course-hero .rh-search-btn {
+    padding: 14px 20px;
+    font-size: 14px;
+    min-width: 70px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .rh-all-course-hero .rh-hero-search {
+    padding: 0 15px;
+  }
+  
+  .rh-all-course-hero .rh-search-input {
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+  
+  .rh-all-course-hero .rh-search-btn {
+    padding: 12px 16px;
+    font-size: 14px;
+    min-width: 60px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .rh-all-course-hero .rh-hero-search {
+    padding: 0 10px;
+  }
+  
+  .rh-all-course-hero .rh-search-field {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .rh-all-course-hero .rh-search-input {
+    width: 100%;
+    border-radius: 6px;
+  }
+  
+  .rh-all-course-hero .rh-search-btn {
+    width: 100%;
+    border-radius: 6px;
+  }
+}
+{% endstyle %}
+
+<div class="rh-all-course-hero">
+      <div class="container_rh">
+        <h2 class="section-title">
+          {{ section.settings.title | default: 'Learning Paths and Courses' }}
+        </h2>
+        <p class="section-desc">
+          {{ section.settings.description | default: 'Created with passion for more than 2,500,000 students' }}
+        </p>
+                                 <div class="rh-hero-search">
+           <form action="/search" method="get" role="search" class="rh-search-form">
+             <div class="rh-search-field">
+               <input class="rh-search-input" id="rh-hero-search" type="search" name="q" value="" placeholder="{{ section.settings.search_placeholder | default: 'Find Your Courses' }}" autocorrect="off" autocomplete="off" autocapitalize="off" spellcheck="false">
+               <button type="submit" class="rh-search-btn" aria-label="Search">
+                 <span class="rh-btn-text">
+                  {{ section.settings.button_text | default: 'Search' }}
+                 </span>
+               </button>
+             </div>
+           </form>
+                  </div>
+       </div>
+     </div>
+
+{% schema %}
+{
+  "name": "RH All Course Hero",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Background Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image",
+      "info": "Upload a background image. If no image is selected, the fallback color #0b5431 will be used."
+    },
+    {
+      "type": "header",
+      "content": "Layout & Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top Padding",
+      "min": 40,
+      "max": 200,
+      "step": 10,
+      "default": 100,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom Padding",
+      "min": 100,
+      "max": 400,
+      "step": 10,
+      "default": 250,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal",
+      "label": "Side Padding",
+      "min": 10,
+      "max": 60,
+      "step": 5,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Learning Paths and Courses"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Created with passion for more than 2,500,000 students"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "title_font_size",
+      "label": "Title Font Size",
+      "min": 24,
+      "max": 80,
+      "step": 2,
+      "default": 56,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "title_font_weight",
+      "label": "Title Font Weight",
+      "min": 300,
+      "max": 900,
+      "step": 100,
+      "default": 700
+    },
+    {
+      "type": "range",
+      "id": "title_line_height",
+      "label": "Title Line Height",
+      "min": 100,
+      "max": 150,
+      "step": 5,
+      "default": 120,
+      "unit": "%"
+    },
+    {
+      "type": "range",
+      "id": "title_margin_bottom",
+      "label": "Title Bottom Margin",
+      "min": 20,
+      "max": 60,
+      "step": 4,
+      "default": 36,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "description_color",
+      "label": "Description Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "description_font_size",
+      "label": "Description Font Size",
+      "min": 14,
+      "max": 32,
+      "step": 1,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "description_font_weight",
+      "label": "Description Font Weight",
+      "min": 300,
+      "max": 700,
+      "step": 100,
+      "default": 400
+    },
+    {
+      "type": "range",
+      "id": "description_line_height",
+      "label": "Description Line Height",
+      "min": 120,
+      "max": 180,
+      "step": 10,
+      "default": 150,
+      "unit": "%"
+    },
+    {
+      "type": "range",
+      "id": "description_margin_bottom",
+      "label": "Description Bottom Margin",
+      "min": 20,
+      "max": 50,
+      "step": 5,
+      "default": 30,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Search Form"
+    },
+    {
+      "type": "text",
+      "id": "search_placeholder",
+      "label": "Search Placeholder Text",
+      "default": "Find Your Courses"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Search"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button Background Color",
+      "default": "#05CE78"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_color",
+      "label": "Button Hover Color",
+      "default": "#04b368"
+    }
+  ],
+  "presets": [
+    {
+      "name": "RH All Course Hero"
+    }
+  ]
+}
+{% endschema %}

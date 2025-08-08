@@ -9,8 +9,200 @@
  */
 {
   "sections": {
+    "rh_all_course_hero_cMXJnH": {
+      "type": "rh-all-course-hero",
+      "name": "RH All Course Hero",
+      "settings": {
+        "padding_top": 100,
+        "padding_bottom": 250,
+        "padding_horizontal": 20,
+        "title": "Learning Paths and Courses",
+        "description": "Created with passion for more than 2,500,000 students",
+        "title_color": "#ffffff",
+        "title_font_size": 56,
+        "title_font_weight": 700,
+        "title_line_height": 120,
+        "title_margin_bottom": 36,
+        "description_color": "#ffffff",
+        "description_font_size": 20,
+        "description_font_weight": 400,
+        "description_line_height": 150,
+        "description_margin_bottom": 30,
+        "search_placeholder": "Find Your Courses",
+        "button_text": "Search",
+        "button_color": "#05ce78",
+        "button_hover_color": "#04b368"
+      }
+    },
+    "rh_all_courses_hero_after_UAywMc": {
+      "type": "rh-all-courses-hero-after",
+      "name": "RH All Courses Hero After",
+      "settings": {
+        "max_width": 970,
+        "padding_top": 0,
+        "padding_bottom": 20,
+        "padding_horizontal": 20,
+        "negative_margin_top": -170,
+        "negative_margin_top_tablet": -120,
+        "negative_margin_top_mobile": -120,
+        "negative_margin_top_small_mobile": -110,
+        "negative_margin_top_xsmall_mobile": -40,
+        "background_color": "transparent",
+        "card_background_color": "#ffffff",
+        "card_border_radius": 8,
+        "card_padding": 40,
+        "card_shadow": "0px 4px 20px rgba(0, 0, 0, 0.10)",
+        "description": "You can buy the individual courses in the paths, entire path course bundles or specific courses from<br>our course collection below.",
+        "highlight_text": "Alternatively, you can also get our \"All Access\" membership to get access to all courses & all paths for a low monthly or annual fee.",
+        "description_color": "#272727",
+        "description_font_size": 18,
+        "description_font_weight": 400,
+        "description_line_height": 28.8,
+        "highlight_color": "#05CE78",
+        "highlight_font_size": 18,
+        "highlight_font_weight": 500,
+        "highlight_line_height": 28.8,
+        "content_gap": 34,
+        "text_gap": 24,
+        "button_text": "Explore Membership",
+        "button_link": "/",
+        "button_color": "#05CE78",
+        "button_hover_color": "#04b368",
+        "button_text_color": "#ffffff",
+        "button_font_size": 18,
+        "button_font_weight": 600,
+        "button_line_height": 23.4,
+        "button_padding_vertical": 20,
+        "button_padding_horizontal": 40,
+        "button_border_radius": 6,
+        "button_min_width": 220
+      }
+    },
+    "rh_goals_section_6ygmNj": {
+      "type": "rh-goals-section",
+      "blocks": {
+        "category_YDnX87": {
+          "type": "category",
+          "settings": {
+            "category_name": "Not sure where to start? Learn with our curated paths."
+          }
+        },
+        "goal_card_FmMn6h": {
+          "type": "goal_card",
+          "settings": {
+            "card_image": "shopify://shop_images/shopware-original.png",
+            "card_text": ""
+          }
+        },
+        "goal_card_htPBXy": {
+          "type": "goal_card",
+          "settings": {
+            "card_image": "shopify://shop_images/swift-original.png",
+            "card_text": ""
+          }
+        },
+        "goal_card_jPMGwj": {
+          "type": "goal_card",
+          "settings": {
+            "card_image": "shopify://shop_images/html5-plain-wordmark.png",
+            "card_text": ""
+          }
+        },
+        "goal_card_qRbnRK": {
+          "type": "goal_card",
+          "settings": {
+            "card_image": "shopify://shop_images/html5-plain-wordmark.png",
+            "card_text": ""
+          }
+        },
+        "goal_card_eDmceC": {
+          "type": "goal_card",
+          "settings": {
+            "card_image": "shopify://shop_images/safari-original.png",
+            "card_text": ""
+          }
+        },
+        "goal_card_a7fGER": {
+          "type": "goal_card",
+          "settings": {
+            "card_image": "shopify://shop_images/vscode-original.png",
+            "card_text": ""
+          }
+        }
+      },
+      "block_order": [
+        "category_YDnX87",
+        "goal_card_FmMn6h",
+        "goal_card_htPBXy",
+        "goal_card_jPMGwj",
+        "goal_card_qRbnRK",
+        "goal_card_eDmceC",
+        "goal_card_a7fGER"
+      ],
+      "name": "Goals Section",
+      "settings": {
+        "section_title": "Our Learning Paths",
+        "section_padding_top": 80,
+        "section_padding_bottom": 50,
+        "section_padding_horizontal": 20,
+        "header_margin_bottom": 60,
+        "title_font_size": 50,
+        "title_margin_bottom": 24,
+        "categories_gap": 16,
+        "category_font_size": 20,
+        "separator_font_size": 18,
+        "cards_gap": 24,
+        "card_width": 195,
+        "card_height": 185,
+        "card_border_radius": 8,
+        "icon_size": 80,
+        "icon_margin_bottom": 8,
+        "card_text_font_size": 14,
+        "background_color": "#ffffff",
+        "title_color": "#272727",
+        "category_color": "#272727CC",
+        "category_hover_color": "#007bff",
+        "separator_color": "#272727",
+        "card_background_color": "#E6FAF1",
+        "card_hover_background_color": "#ffffff",
+        "card_hover_border_color": "#e9ecef",
+        "card_text_color": "#272727"
+      }
+    },
+    "rich_text_4G6JdE": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_JB6J4N": {
+          "type": "heading",
+          "settings": {
+            "heading": "Explore all Courses",
+            "heading_size": "h1"
+          }
+        },
+        "text_yYb6te": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Browse our extremely comprehensive course collection to find exactly the right course for you.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JB6J4N",
+        "text_yYb6te"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 60,
+        "padding_bottom": 20
+      }
+    },
     "banner": {
       "type": "main-collection-banner",
+      "disabled": true,
       "settings": {
         "show_collection_description": true,
         "show_collection_image": false,
@@ -22,6 +214,7 @@
       "settings": {
         "products_per_page": 16,
         "columns_desktop": 4,
+        "columns_mobile": "2",
         "color_scheme": "scheme-1",
         "image_ratio": "adapt",
         "image_shape": "default",
@@ -32,13 +225,16 @@
         "enable_filtering": true,
         "filter_type": "horizontal",
         "enable_sorting": true,
-        "columns_mobile": "2",
         "padding_top": 36,
         "padding_bottom": 36
       }
     }
   },
   "order": [
+    "rh_all_course_hero_cMXJnH",
+    "rh_all_courses_hero_after_UAywMc",
+    "rh_goals_section_6ygmNj",
+    "rich_text_4G6JdE",
     "banner",
     "product-grid"
   ]

@@ -34,6 +34,9 @@
     width: 100%;
     transition: all 0.3s ease;
     cursor: pointer;
+    display: block;
+    text-decoration: none;
+    color: inherit;
 }
 
 .rh-course-card:hover {
@@ -496,7 +499,7 @@
 {% endstyle %}
 
 {%- if card_product and card_product != empty -%}
-  <div class="rh-course-card {{ card_class }}">
+  <a href="{{ card_product.url }}" class="rh-course-card {{ card_class }}" style="text-decoration: none; color: inherit;">
     <div class="rh-course-card-image-container">
       <div class="rh-course-card-image-wrapper">
         <div class="rh-course-card-image">
@@ -542,7 +545,7 @@
         </div>
       {%- endif -%}
     </div>
-  </div>
+  </a>
 {%- else -%}
   <!-- Fallback card when no product is provided -->
   <div class="rh-course-card {{ card_class }}">
