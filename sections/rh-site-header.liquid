@@ -1,0 +1,878 @@
+{% style %}
+.rh-header-section {
+    background: #fff;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .rh-header-section .container_rh {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .rh-header-section .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .rh-header-section .header-left {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .rh-header-section .header-logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .rh-header-section .header-logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .rh-header-section .logo-text {
+    color: #05ce78;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .rh-header-section .logo-image {
+    max-height: 50px;
+    width: auto;
+    display: block;
+  }
+
+  .rh-header-section .header-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .rh-header-section .nav-link {
+    color: #231e15;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .rh-header-section .nav-link:hover {
+    color: #05ce78;
+  }
+
+  .rh-header-section .header-right {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .rh-header-section .header-search {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    /* min-width: 300px; */
+  }
+
+  .rh-header-section .search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px 16px;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #231e15;
+    background: transparent;
+  }
+
+  .rh-header-section .search-input::placeholder {
+    color: #5a6078;
+  }
+
+  .rh-header-section .search-button {
+    background: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+  }
+
+  .rh-header-section .search-button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .rh-header-section .header-buttons {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .rh-header-section .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    white-space: nowrap;
+  }
+
+  .rh-header-section .btn-primary {
+    background: #05ce78;
+    color: white;
+  }
+
+  .rh-header-section .btn-primary:hover {
+    background: #04b868;
+    transform: translateY(-1px);
+  }
+
+  .rh-header-section .btn-outline {
+    background: transparent;
+    color: #231e15;
+    border-color: #231e15;
+  }
+
+  .rh-header-section .btn-outline:hover {
+    background: #231e15;
+    color: white;
+  }
+
+  /* Mobile Menu Toggle */
+  .rh-header-section .mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #231e15;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+
+  .rh-header-section .mobile-menu-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  .rh-header-section .mobile-menu-toggle:focus {
+    outline: 2px solid #05ce78;
+    outline-offset: 2px;
+  }
+
+  /* Responsive Styles for Header */
+
+  /* Desktop (1440px+) */
+  @media screen and (min-width: 1440px) {
+    .rh-header-section .container_rh {
+      max-width: 1440px;
+      padding: 0 40px;
+    }
+
+    .rh-header-section .header-content {
+      gap: 50px;
+    }
+
+    .rh-header-section .header-left {
+      gap: 50px;
+    }
+
+    .rh-header-section .logo-text {
+      font-size: 28px;
+    }
+
+    .rh-header-section .nav-link {
+      font-size: 18px;
+    }
+
+    .rh-header-section .header-search {
+      /* min-width: 400px; */
+    }
+
+    .rh-header-section .search-input {
+      font-size: 16px;
+      padding: 12px 20px;
+    }
+
+    .rh-header-section .btn {
+      padding: 12px 24px;
+      font-size: 16px;
+      /* min-height: 48px; */
+    }
+  }
+
+  /* Laptop (1024px - 1439px) */
+  @media screen and (min-width: 1024px) and (max-width: 1439px) {
+    .rh-header-section .container_rh {
+      max-width: 100%;
+      padding: 0 clamp(20px, 3vw, 30px);
+    }
+
+    .rh-header-section .header-content {
+      gap: 10px;
+    }
+
+    .rh-header-section .header-left {
+      gap: clamp(30px, 4vw, 15px);
+    }
+
+    .rh-header-section .logo-text {
+      font-size: clamp(20px, 2.5vw, 26px);
+    }
+
+    .rh-header-section .nav-link {
+      font-size: clamp(14px, 1.5vw, 17px);
+    }
+
+    .rh-header-section .header-search {
+      /* min-width: clamp(250px, 25vw, 350px); */
+    }
+    .rh-header-section .header-right {
+      gap: 10px;
+    }
+    .rh-header-section .header-buttons {
+      gap: 5px;
+    }
+    .rh-header-section .btn {
+      padding: clamp(8px, 1vw, 10px) clamp(16px, 2vw, 20px);
+      font-size: clamp(13px, 1.3vw, 15px);
+      /* min-height: clamp(36px, 4vw, 42px); */
+    }
+  }
+
+  /* Medium Tablet (600px - 767px) */
+  @media screen and (min-width: 600px) and (max-width: 1024px) {
+    .rh-header-section .container_rh {
+      padding: 0 18px;
+    }
+
+    .rh-header-section .header-content {
+      gap: 25px;
+    }
+
+    .rh-header-section .header-left {
+      gap: 25px;
+    }
+
+    .rh-header-section .logo-text {
+      font-size: 20px;
+    }
+
+    .rh-header-section .header-nav {
+      display: none;
+    }
+
+    .rh-header-section .mobile-menu-toggle {
+      display: block;
+    }
+
+    .rh-header-section .header-search {
+      min-width: 200px;
+    }
+
+    .rh-header-section .header-buttons {
+      gap: 12px;
+    }
+
+    .rh-header-section .btn {
+      padding: 8px 14px;
+      font-size: 13px;
+      /* min-height: 36px; */
+    }
+  }
+
+  /* Small Tablet (481px - 599px) */
+  @media screen and (min-width: 481px) and (max-width: 599px) {
+    .rh-header-section .container_rh {
+      padding: 0 15px;
+    }
+
+    .rh-header-section .header-content {
+      gap: 20px;
+    }
+
+    .rh-header-section .header-left {
+      gap: 20px;
+    }
+
+    .rh-header-section .logo-text {
+      font-size: 18px;
+    }
+
+    .rh-header-section .header-nav {
+      display: none;
+    }
+
+    .rh-header-section .mobile-menu-toggle {
+      display: block;
+    }
+
+    .rh-header-section .header-search {
+      display: none;
+    }
+
+    .rh-header-section .header-buttons {
+      gap: 10px;
+    }
+
+    .rh-header-section .btn {
+      padding: 7px 12px;
+      font-size: 12px;
+      /* min-height: 34px; */
+    }
+  }
+
+  /* Large Phone (425px - 480px) */
+  @media screen and (min-width: 425px) and (max-width: 480px) {
+    .rh-header-section {
+      padding: 12px 0;
+    }
+
+    .rh-header-section .container_rh {
+      padding: 0 12px;
+    }
+
+    .rh-header-section .header-content {
+      gap: 15px;
+    }
+
+    .rh-header-section .header-left {
+      gap: 15px;
+    }
+
+    .rh-header-section .logo-text {
+      font-size: 16px;
+    }
+
+    .rh-header-section .header-nav {
+      display: none;
+    }
+
+    .rh-header-section .mobile-menu-toggle {
+      display: block;
+    }
+
+    .rh-header-section .header-search {
+      display: none;
+    }
+
+    .rh-header-section .header-buttons {
+      gap: 8px;
+    }
+
+    .rh-header-section .btn {
+      padding: 6px 10px;
+      font-size: 11px;
+      /* min-height: 32px; */
+    }
+  }
+
+  /* Medium Phone (375px - 424px) */
+  @media screen and (min-width: 375px) and (max-width: 424px) {
+    .rh-header-section {
+      padding: 10px 0;
+    }
+
+    .rh-header-section .container_rh {
+      padding: 0 10px;
+    }
+
+    .rh-header-section .header-content {
+      gap: 12px;
+    }
+
+    .rh-header-section .header-left {
+      gap: 12px;
+    }
+
+    .rh-header-section .logo-text {
+      font-size: 15px;
+    }
+
+    .rh-header-section .header-nav {
+      display: none;
+    }
+
+    .rh-header-section .mobile-menu-toggle {
+      display: block;
+    }
+
+    .rh-header-section .header-search {
+      display: none;
+    }
+
+    .rh-header-section .header-buttons {
+      gap: 6px;
+    }
+
+    .rh-header-section .btn {
+      padding: 5px 8px;
+      font-size: 10px;
+      /* min-height: 30px; */
+    }
+  }
+
+  /* Small Phone (320px - 374px) */
+  @media screen and (min-width: 320px) and (max-width: 374px) {
+    .rh-header-section {
+      padding: 8px 0;
+    }
+
+    .rh-header-section .container_rh {
+      padding: 0 8px;
+    }
+
+    .rh-header-section .header-content {
+      /* flex-direction: column; */
+      gap: 10px;
+    }
+
+    .rh-header-section .header-left {
+      width: 100%;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .rh-header-section .logo-text {
+      font-size: 14px;
+    }
+
+    .rh-header-section .header-nav {
+      display: none;
+    }
+
+    .rh-header-section .mobile-menu-toggle {
+      display: block;
+    }
+
+    .rh-header-section .header-search {
+      display: none;
+    }
+
+    .rh-header-section .header-right {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .rh-header-section .header-buttons {
+      width: 100%;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    .rh-header-section .btn {
+      flex: 1;
+      max-width: 100px;
+      padding: 4px 6px;
+      font-size: 9px;
+      /* min-height: 28px; */
+    }
+  }
+
+  /* Extra Small Phone (< 320px) */
+  @media screen and (max-width: 319px) {
+    .rh-header-section {
+      padding: 6px 0;
+    }
+
+    .rh-header-section .container_rh {
+      padding: 0 5px;
+    }
+
+    .rh-header-section .header-content {
+      /* flex-direction: column; */
+      gap: 8px;
+    }
+
+    .rh-header-section .header-left {
+      width: 100%;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .rh-header-section .logo-text {
+      font-size: 13px;
+    }
+
+    .rh-header-section .header-nav {
+      display: none;
+    }
+
+    .rh-header-section .mobile-menu-toggle {
+      display: block;
+    }
+
+    .rh-header-section .header-search {
+      display: none;
+    }
+
+    .rh-header-section .header-right {
+      width: 100%;
+      justify-content: center;
+    }
+
+    .rh-header-section .header-buttons {
+      width: 100%;
+      justify-content: center;
+      gap: 4px;
+    }
+
+    .rh-header-section .btn {
+      flex: 1;
+      max-width: 80px;
+      padding: 3px 4px;
+      font-size: 8px;
+    }
+  }
+
+  /* Mobile Navigation Menu */
+  .rh-header-section .mobile-nav {
+    display: none;
+    position: fixed;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    padding: 20px;
+    border-top: 1px solid #e5e7eb;
+    z-index: 999;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .rh-header-section .mobile-nav.active {
+    display: block;
+    /* transform: translateY(0); */
+  }
+
+  .rh-header-section .mobile-nav .nav-link {
+    display: block;
+    padding: 12px 0;
+    border-bottom: 1px solid #e5e7eb;
+    color: #231e15;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .rh-header-section .mobile-nav .nav-link:hover {
+    color: #05ce78;
+  }
+
+  .rh-header-section .mobile-nav .nav-link:last-child {
+    border-bottom: none;
+  }
+
+  .rh-header-section .mobile-search {
+    display: none;
+    margin-top: 15px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .rh-header-section .mobile-search {
+      display: block;
+    }
+
+    .rh-header-section .mobile-search .header-search {
+      display: flex;
+      width: 100%;
+      min-width: auto;
+    }
+  }
+
+  /* Focus styles for accessibility */
+  .rh-header-section .nav-link:focus,
+  .rh-header-section .btn:focus {
+    outline: 2px solid #05ce78;
+    outline-offset: 2px;
+  }
+
+  /* Overlay for mobile menu */
+  .rh-header-section .mobile-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+  }
+
+  .rh-header-section .mobile-overlay.active {
+    display: block;
+  }
+{% endstyle %}
+
+
+<div class="rh-header-section">
+      <div class="container_rh">
+        <div class="header-content">
+          <div class="header-left">
+            <div class="header-logo">
+              <a href="{{ routes.root_url }}">
+                {% if section.settings.logo != blank %}
+                  <img 
+                    src="{{ section.settings.logo | image_url: width: 200 }}" 
+                    alt="{{ shop.name }}"
+                    class="logo-image"
+                    width="{{ section.settings.logo.width }}"
+                    height="{{ section.settings.logo.height }}"
+                    loading="lazy"
+                  >
+                {% else %}
+                  <span class="logo-text">{{ shop.name }}</span>
+                {% endif %}
+              </a>
+            </div>
+            <nav class="header-nav">
+              {% for link in linklists.main-menu.links %}
+                <a href="{{ link.url }}" class="nav-link">{{ link.title }}</a>
+              {% endfor %}
+            </nav>
+          </div>
+          <div class="header-right">
+            <form action="{{ routes.search_url }}" method="get" class="header-search" role="search">
+              <input
+                type="search"
+                name="q"
+                class="search-input"
+                placeholder="Search Courses"
+                value="{{ search.terms | escape }}"
+                aria-label="Search"
+              />
+              <button type="submit" class="search-button" aria-label="Search courses">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19 19L13 13M15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8Z"
+                    stroke="#231E15"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </form>
+            <div class="header-buttons">
+              <a href="{{ routes.account_url }}" class="btn btn-primary">Pro Members</a>
+              {% unless customer %}
+                <a href="{{ routes.account_register_url }}" class="btn btn-outline">Sign Up</a>
+              {% endunless %}
+              <button
+                class="mobile-menu-toggle"
+                aria-label="Toggle mobile menu"
+                aria-expanded="false"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3 12H21M3 6H21M3 18H21"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile Navigation Menu -->
+      <div class="mobile-overlay"></div>
+      <nav class="mobile-nav">
+        {% for link in linklists.main-menu.links %}
+          <a href="{{ link.url }}" class="nav-link">{{ link.title }}</a>
+        {% endfor %}
+        <div class="mobile-search">
+          <form action="{{ routes.search_url }}" method="get" class="header-search" role="search">
+            <input
+              type="search"
+              name="q"
+              class="search-input"
+              placeholder="Search Courses"
+              value="{{ search.terms | escape }}"
+              aria-label="Search"
+            />
+            <button type="submit" class="search-button" aria-label="Search courses">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19 19L13 13M15 8C15 11.866 11.866 15 8 15C4.13401 15 1 11.866 1 8C1 4.13401 4.13401 1 8 1C11.866 1 15 4.13401 15 8Z"
+                  stroke="#231E15"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </form>
+        </div>
+      </nav>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+        const mobileNav = document.querySelector(".mobile-nav");
+        const mobileOverlay = document.querySelector(".mobile-overlay");
+        const body = document.body;
+
+        // Function to toggle mobile menu
+        function toggleMobileMenu() {
+          const isOpen = mobileNav.classList.contains("active");
+
+          if (isOpen) {
+            closeMobileMenu();
+          } else {
+            openMobileMenu();
+          }
+        }
+
+        // Function to open mobile menu
+        function openMobileMenu() {
+          mobileNav.classList.add("active");
+          mobileOverlay.classList.add("active");
+          mobileMenuToggle.setAttribute("aria-expanded", "true");
+          body.style.overflow = "hidden";
+
+          // Focus management
+          const firstNavLink = mobileNav.querySelector(".nav-link");
+          if (firstNavLink) {
+            firstNavLink.focus();
+          }
+        }
+
+        // Function to close mobile menu
+        function closeMobileMenu() {
+          mobileNav.classList.remove("active");
+          mobileOverlay.classList.remove("active");
+          mobileMenuToggle.setAttribute("aria-expanded", "false");
+          body.style.overflow = "";
+
+          // Return focus to toggle button
+          mobileMenuToggle.focus();
+        }
+
+        // Event listeners
+        mobileMenuToggle.addEventListener("click", toggleMobileMenu);
+        mobileOverlay.addEventListener("click", closeMobileMenu);
+
+        // Keyboard navigation
+        mobileMenuToggle.addEventListener("keydown", function (e) {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            toggleMobileMenu();
+          }
+        });
+
+        // Close menu on escape key
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && mobileNav.classList.contains("active")) {
+            closeMobileMenu();
+          }
+        });
+
+        // Handle tab navigation within mobile menu
+        mobileNav.addEventListener("keydown", function (e) {
+          if (e.key === "Tab") {
+            const navLinks = mobileNav.querySelectorAll(".nav-link");
+            const firstLink = navLinks[0];
+            const lastLink = navLinks[navLinks.length - 1];
+
+            if (e.shiftKey) {
+              // Shift + Tab
+              if (document.activeElement === firstLink) {
+                e.preventDefault();
+                mobileMenuToggle.focus();
+              }
+            } else {
+              // Tab
+              if (document.activeElement === lastLink) {
+                e.preventDefault();
+                mobileMenuToggle.focus();
+              }
+            }
+          }
+        });
+
+        // Close menu when clicking on a nav link
+        const mobileNavLinks = mobileNav.querySelectorAll(".nav-link");
+        mobileNavLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            closeMobileMenu();
+          });
+        });
+
+        // Handle window resize
+        window.addEventListener("resize", function () {
+          if (
+            window.innerWidth > 768 &&
+            mobileNav.classList.contains("active")
+          ) {
+            closeMobileMenu();
+          }
+        });
+      });
+    </script>
+
+{% schema %}
+{
+  "name": "Site Header",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Site Header"
+    }
+  ]
+}
+{% endschema %}

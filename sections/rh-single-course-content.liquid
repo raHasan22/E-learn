@@ -1,0 +1,1356 @@
+{% style %}
+.rh-content-and-side-card {
+    padding: 80px 20px;
+    background-color: #ffffff;
+}
+
+.rh-content-and-side-card .container_rh {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+/* Content Left Section */
+.content-left {
+    width: 856px;
+    flex-shrink: 0;
+}
+
+/* Contents Left RH Section Styles */
+
+.learn-container {
+    padding: 24px;
+    background: white;
+    outline: 1px #E7F0EA solid;
+    outline-offset: -1px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+    display: inline-flex;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.learn-title {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: #272727;
+    font-size: 28px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    line-height: 33.60px;
+    word-wrap: break-word;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.learn-content {
+    align-self: stretch;
+    justify-content: flex-start;
+    gap: 24px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.learn-column {
+    flex: 1 1 0;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 18px;
+    display: inline-flex;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.learn-item {
+    align-self: stretch;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    display: inline-flex;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.learn-checkbox {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 2px solid transparent;
+    border-radius: 2px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.learn-checkbox-inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    color: #000;
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.learn-text {
+    flex: 1 1 0;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: #272727;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    line-height: 21px;
+    word-wrap: break-word;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+/* Side Card Styles */
+.side-card {
+    width: calc(100% - 890px);
+    background: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    outline: 1px #EDEDEC solid;
+    outline-offset: -1px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    display: inline-flex;
+    margin-top: {{ section.settings.side_card_margin_top | default: -346 }}px;
+}
+
+.side-card-image-container {
+    align-self: stretch;
+    padding: 8px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    display: flex;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-image-wrapper {
+    align-self: stretch;
+    height: 256px;
+    position: relative;
+    overflow: hidden;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2px;
+}
+
+.side-card-badge {
+    padding: 8px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: rgba(255, 255, 255, 0.60);
+    border-radius: 2px;
+    outline: 1px white solid;
+    outline-offset: -1px;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    display: inline-flex;
+}
+
+.side-card-badge-icon {
+    width: 24px;
+    height: 24px;
+    position: relative;
+}
+
+.side-card-badge-icon-inner {
+    width: 24px;
+    height: 24px;
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    overflow: hidden;
+}
+
+.side-card-badge-icon-bg {
+    width: 24px;
+    height: 21.35px;
+    left: 0px;
+    top: 1.31px;
+    position: absolute;
+    background: #06C271;
+}
+
+.side-card-content {
+    align-self: stretch;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+    display: flex;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-tabs {
+    align-self: stretch;
+    border-bottom: 1px #C8C7C5 solid;
+    justify-content: flex-start;
+    align-items: center;
+    display: inline-flex;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-tab {
+    flex: 1 1 0;
+    padding: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    display: flex;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-tab.active {
+    border-bottom: 1px #272727 solid;
+}
+
+.side-card-tab-text {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: #272727;
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    line-height: 30px;
+    word-wrap: break-word;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-body {
+    align-self: stretch;
+    padding-bottom: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 16px;
+    display: flex;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-body-content {
+    align-self: stretch;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+    display: flex;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-description {
+    align-self: stretch;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    display: flex;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-description-title {
+    align-self: stretch;
+    color: #272727;
+    font-size: 20px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    line-height: 24px;
+    word-wrap: break-word;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-description-text {
+    align-self: stretch;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-description-text span {
+    color: #272727;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+}
+
+.side-card-description-text .highlight {
+    color: #05CE78;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+    text-decoration: none;
+}
+
+.side-card-cta {
+    align-self: stretch;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    display: flex;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-cta-button {
+    align-self: stretch;
+    height: 48px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background: #05CE78;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    display: inline-flex;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+}
+
+.side-card-cta-button:hover {
+    background: #04B868;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(5, 206, 120, 0.3);
+}
+
+.side-card-cta-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(5, 206, 120, 0.3);
+}
+
+.side-card-cta-button-text {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    line-height: 24px;
+    word-wrap: break-word;
+    min-height: 1px; /* Ensure empty divs show */
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.side-card-cta-subtext {
+    align-self: stretch;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: #272727;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    line-height: 21px;
+    word-wrap: break-word;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-divider {
+    align-self: stretch;
+    height: 21px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-divider-line {
+    flex: 1;
+    height: 0px;
+    outline: 1px #EDEDEC solid;
+    outline-offset: -0.50px;
+    display: inline-block !important;
+}
+
+.side-card-divider-text {
+    padding: 0 8px;
+    background: white;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    display: inline-flex;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-divider-text span {
+    align-self: stretch;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: #272727;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    line-height: 21px;
+    word-wrap: break-word;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-pricing {
+    align-self: stretch;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 16px;
+    display: flex;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-price-row {
+    align-self: stretch;
+    justify-content: space-between;
+    align-items: center;
+    display: inline-flex;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-price-container {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 4px;
+    display: inline-flex;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-price-main {
+    justify-content: flex-start;
+    align-items: center;
+    gap: 16px;
+    display: inline-flex;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-current-price {
+    color: #272727;
+    font-size: 32px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    line-height: 48px;
+    word-wrap: break-word;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-price-separator {
+    width: 40px;
+    height: 0px;
+    transform: rotate(90deg);
+    outline: 1px #272727 solid;
+    outline-offset: -0.50px;
+    display: inline-block !important;
+}
+
+.side-card-original-price-container {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: inline-flex;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-original-price-label {
+    color: rgba(39.23, 39.23, 39.23, 0.80);
+    font-size: 12px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    line-height: 18px;
+    word-wrap: break-word;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-original-price {
+    color: rgba(39.23, 39.23, 39.23, 0.80);
+    font-size: 18px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    text-decoration: line-through;
+    line-height: 28px;
+    word-wrap: break-word;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-timer {
+    color: #F1463C;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    line-height: 20px;
+    word-wrap: break-word;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-actions {
+    align-self: stretch;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    display: flex;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-add-cart {
+    align-self: stretch;
+    height: 44px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 8px;
+    outline: 1px #272727 solid;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    display: inline-flex;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: white;
+    border: 1px solid #272727;
+}
+
+.side-card-add-cart:hover {
+    background: #272727;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(39, 39, 39, 0.2);
+}
+
+.side-card-add-cart:hover .side-card-add-cart-text {
+    color: white;
+}
+
+.side-card-add-cart:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(39, 39, 39, 0.2);
+}
+
+.side-card-add-cart-text {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: #272727;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    line-height: 21px;
+    word-wrap: break-word;
+    transition: color 0.3s ease;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-buy-now {
+    align-self: stretch;
+    height: 44px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background: #05CE78;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    display: inline-flex;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+    outline: none;
+}
+
+.side-card-buy-now:hover {
+    background: #04B868;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(5, 206, 120, 0.3);
+}
+
+.side-card-buy-now:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(5, 206, 120, 0.3);
+}
+
+.side-card-buy-now-text {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    line-height: 21px;
+    word-wrap: break-word;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-guarantee {
+    align-self: stretch;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    display: flex;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-guarantee-text {
+    text-align: center;
+    color: #272727;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    line-height: 21px;
+    word-wrap: break-word;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-footer {
+    align-self: stretch;
+    justify-content: space-between;
+    align-items: flex-start;
+    display: inline-flex;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-footer-left {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 24px;
+    display: inline-flex;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-footer-center {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 24px;
+    display: inline-flex;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-footer-right {
+    color: #05CE78;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    text-decoration: underline;
+    line-height: 24px;
+    word-wrap: break-word;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-footer-link {
+    align-self: stretch;
+    color: #05CE78;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    text-decoration: underline;
+    line-height: 24px;
+    word-wrap: break-word;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-footer-link:hover {
+    color: #04B868;
+    text-decoration: none;
+}
+
+.side-card-coupon {
+    align-self: stretch;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    display: inline-flex;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-coupon-input {
+    flex: 1 1 0;
+    height: 44px;
+    position: relative;
+    overflow: hidden;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-coupon-input-bg {
+    width: 100%;
+    height: 100%;
+    background: #FBFBFA;
+    border-radius: 4px;
+    border: 1px #E7F0EA solid;
+    transition: border-color 0.3s ease;
+}
+
+.side-card-coupon-input-bg:focus-within {
+    border-color: #05CE78;
+    box-shadow: 0 0 0 2px rgba(5, 206, 120, 0.1);
+}
+
+.side-card-coupon-input-text {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: #272727;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    line-height: 21px;
+    word-wrap: break-word;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-coupon-button {
+    height: 40px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 8px;
+    outline: 1px #272727 solid;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    display: flex;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: white;
+    border: 1px solid #272727;
+}
+
+.side-card-coupon-button:hover {
+    background: #272727;
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(39, 39, 39, 0.2);
+}
+
+.side-card-coupon-button:hover .side-card-coupon-button-text {
+    color: white;
+}
+
+.side-card-coupon-button:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 4px rgba(39, 39, 39, 0.2);
+}
+
+.side-card-coupon-button-text {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: #272727;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    line-height: 21px;
+    word-wrap: break-word;
+    transition: color 0.3s ease;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.side-card-actions form{
+    width: 100%;
+}
+.side-card-actions button{
+    width: 100%;
+}
+
+/* Responsive adjustments for contents-left_rh */
+@media (max-width: 1200px) {
+    .content-left {
+        width: 55%;
+        flex-shrink: 0;
+    }
+    
+    .side-card {
+        width: 45%;
+        max-width: none;
+        margin-top: 0px;
+    }
+}
+
+@media (max-width: 991px) {
+    .rh-content-and-side-card .container_rh {
+        flex-direction: column-reverse;
+    }
+    
+    .content-left {
+        width: 100%;
+        flex-shrink: 0;
+    }
+    
+    .side-card {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .rh-content-and-side-card {
+        padding: 40px 20px;
+    }
+    
+    .rh-content-and-side-card .container_rh {
+        flex-direction: column-reverse;
+    }
+    
+    .content-left {
+        width: 100%;
+        flex-shrink: 0;
+    }
+    
+    .learn-content {
+        flex-direction: column;
+    }
+    
+    .learn-column {
+        width: 100%;
+    }
+    
+    .side-card {
+        width: 100%;
+        max-width: none;
+    }
+    
+    /* Responsive button styles */
+    .side-card-cta-button {
+        height: 44px;
+        padding-left: 24px;
+        padding-right: 24px;
+        font-size: 16px;
+    }
+    
+    .side-card-add-cart,
+    .side-card-buy-now {
+        height: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .side-card-coupon-button {
+        height: 36px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .side-card-footer {
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+    }
+    
+    .side-card-footer-left,
+    .side-card-footer-center,
+    .side-card-footer-right {
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .rh-content-and-side-card {
+        padding: 30px 15px;
+    }
+    
+    .side-card-cta-button {
+        height: 42px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 16px;
+    }
+    
+    .side-card-add-cart,
+    .side-card-buy-now {
+        height: 38px;
+        padding-left: 16px;
+        padding-right: 16px;
+        font-size: 16px;
+    }
+    
+    .side-card-coupon {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .side-card-coupon-input {
+        height: 38px;
+    }
+    
+    .side-card-coupon-button {
+        height: 38px;
+        width: 100%;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    
+    .side-card-body {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    .side-card-tab-text {
+        font-size: 18px;
+    }
+    
+    .side-card-description-title {
+        font-size: 18px;
+    }
+    
+    .side-card-current-price {
+        font-size: 28px;
+    }
+}
+
+/* Course Details Sections */
+.course-details {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 40px;
+    display: flex;
+    width: 100%;
+    margin-top: 40px;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.requirements-section,
+.description-section {
+    align-self: stretch;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 24px;
+    display: flex;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.section-title {
+    align-self: stretch;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: #272727;
+    font-size: 28px;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    line-height: 33.60px;
+    word-wrap: break-word;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.section-content {
+    align-self: stretch;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: #272727;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.description-text {
+    color: #272727;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+    max-height: 120px;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.description-text.expanded {
+    max-height: none;
+}
+
+.show-more {
+    color: #05CE78;
+    font-size: 16px;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    line-height: 24px;
+    word-wrap: break-word;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    display: inline-block;
+    margin-top: 8px;
+    min-height: 1px; /* Ensure empty divs show */
+}
+
+.show-more:hover {
+    color: #04B868;
+}
+
+/* Responsive adjustments for course details */
+@media (max-width: 768px) {
+    .course-details {
+        gap: 32px;
+        margin-top: 32px;
+    }
+    
+    .requirements-section,
+    .description-section {
+        gap: 20px;
+    }
+    
+    .section-title {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    
+    .section-content {
+        font-size: 15px;
+        line-height: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .course-details {
+        gap: 28px;
+        margin-top: 28px;
+    }
+    
+    .requirements-section,
+    .description-section {
+        gap: 16px;
+    }
+    
+    .section-title {
+        font-size: 22px;
+        line-height: 26px;
+    }
+    
+    .section-content {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+{% endstyle %}
+
+{% if product %}
+<div class="rh-content-and-side-card">
+    <div class="container_rh">
+        <div class="content-left">
+            {% assign skills_list = product.metafields.custom.skills_learn | split: ',' %}
+            {% if skills_list.size > 0 %}
+                <div class="learn-container">
+                    <div class="learn-title">What you'll learn</div>
+                    <div class="learn-content">
+                        <div class="learn-column">
+                            {% for skill in skills_list limit: 5 %}
+                                {% if skill != blank %}
+                                    <div class="learn-item">
+                                        <div class="learn-checkbox">
+                                            <div class="learn-checkbox-inner">
+                                                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"></path>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="learn-text">{{ skill | strip }}</div>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                        {% if skills_list.size > 5 %}
+                            <div class="learn-column">
+                                {% for skill in skills_list offset: 5 %}
+                                    {% if skill != blank %}
+                                        <div class="learn-item">
+                                            <div class="learn-checkbox">
+                                                <div class="learn-checkbox-inner">
+                                                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"></path>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="learn-text">{{ skill | strip }}</div>
+                                        </div>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endif %}
+            
+            <div class="course-details">
+                {% if product.metafields.custom.requirements != blank %}
+                    <div class="requirements-section">
+                        <div class="section-title">Requirements</div>
+                        <div class="section-content">{{ product.metafields.custom.requirements }}</div>
+                    </div>
+                {% endif %}
+                
+                {% if product.description != blank %}
+                    <div class="description-section">
+                        <div class="section-title">Description</div>
+                        <div class="section-content">
+                            <div id="description-content" class="description-text">
+                                {{ product.description | strip_html }}
+                            </div>
+                            <span class="show-more" onclick="toggleDescription()" style="display: none;">Show more</span>
+                        </div>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+
+        <div class="side-card">
+            <div class="side-card-image-container">
+                <div class="side-card-image-wrapper">
+                    {% if product.featured_image %}
+                        <img class="side-card-image" src="{{ product.featured_image | image_url: width: 398 }}" alt="{{ product.title }}" />
+                    {% else %}
+                        <img class="side-card-image" src="https://placehold.co/398x256" alt="Course preview" />
+                    {% endif %}
+                </div>
+            </div>
+            <div class="side-card-content">
+                <div class="side-card-body">
+                    <div class="side-card-body-content">
+                        <div class="side-card-description">
+                            <div class="side-card-description-title">Subscribe to Sales360's top courses</div>
+                            <div class="side-card-description-text">
+                                <span>Get this course, plus 12,000+ of our top-rated courses, with Personal Plan. </span><a href="/collections/all" class="highlight">Learn more</a>
+                            </div>
+                        </div>
+                        <div class="side-card-cta">
+                            <a href="/collection/all" class="side-card-cta-button">
+                                <button type="button" class="side-card-cta-button-text">Try Personal Plan for Free</button>
+                            </a>
+                            <div class="side-card-cta-subtext">Starting at $11.00 per month after trial
+                                Cancel anytime</div>
+                        </div>
+                    </div>
+                    <div class="side-card-divider">
+                        <div class="side-card-divider-line"></div>
+                        <div class="side-card-divider-text">
+                            <span>or</span>
+                        </div>
+                        <div class="side-card-divider-line"></div>
+                    </div>
+                    <div class="side-card-pricing">
+                        <div class="side-card-price-row">
+                            <div class="side-card-price-container">
+                                <div class="side-card-price-main">
+                                    <div class="side-card-current-price">{{ product.price | money }}</div>
+                                    {% if product.compare_at_price > product.price %}
+                                        <div class="side-card-price-separator"></div>
+                                        <div class="side-card-original-price-container">
+                                            <div class="side-card-original-price-label">Regular price</div>
+                                            <div class="side-card-original-price">{{ product.compare_at_price | money }}</div>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                                {% if product.metafields.custom.sale_timer != blank %}
+                                    <div class="side-card-timer">{{ product.metafields.custom.sale_timer }}</div>
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="side-card-actions">
+                            <form action="/cart/add" method="post" enctype="multipart/form-data">
+                                <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                                <input type="hidden" name="quantity" value="1">
+                                <button type="submit" class="side-card-add-cart">
+                                    <div class="side-card-add-cart-text">Add to Cart</div>
+                                </button>
+                            </form>
+                            <form action="/cart/add" method="post" enctype="multipart/form-data">
+                                <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                                <input type="hidden" name="quantity" value="1">
+                                <input type="hidden" name="return_to" value="/checkout">
+                                <button type="submit" class="side-card-buy-now">
+                                    <div class="side-card-buy-now-text">Buy Now</div>
+                                </button>
+                            </form>
+                            <div class="side-card-guarantee">
+                                <div class="side-card-guarantee-text">14 Days Money Back Guarantee</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="side-card-footer">
+                        <div class="side-card-footer-left">
+                            <div class="side-card-footer-link" onclick="shareProduct()">Share</div>
+                        </div>
+                        <div class="side-card-footer-center">
+                            <div class="side-card-footer-link">Gift this course</div>
+                        </div>
+                        <div class="side-card-footer-right">
+                            <div class="side-card-footer-link">Apply Coupon</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const descriptionContent = document.getElementById('description-content');
+        const showMoreSpan = document.querySelector('.show-more');
+        
+        if (!descriptionContent || !showMoreSpan) {
+            return;
+        }
+        
+        // Check if content needs truncation
+        const contentHeight = descriptionContent.scrollHeight;
+        const maxHeight = 120; // Same as CSS max-height
+        
+        if (contentHeight > maxHeight) {
+            showMoreSpan.style.display = 'inline-block';
+        } else {
+            showMoreSpan.style.display = 'none';
+        }
+    });
+
+    function toggleDescription() {
+        const descriptionContent = document.getElementById('description-content');
+        const showMoreSpan = document.querySelector('.show-more');
+        
+        if (!descriptionContent || !showMoreSpan) {
+            console.error('Description elements not found');
+            return;
+        }
+        
+        const isExpanded = descriptionContent.classList.contains('expanded');
+
+        if (isExpanded) {
+            descriptionContent.classList.remove('expanded');
+            showMoreSpan.textContent = 'Show more';
+        } else {
+            descriptionContent.classList.add('expanded');
+            showMoreSpan.textContent = 'Show less';
+        }
+    }
+
+    function shareProduct() {
+        if (navigator.share) {
+            navigator.share({
+                title: '{{ product.title }}',
+                text: '{{ product.description | strip_html | truncate: 100 }}',
+                url: window.location.href
+            });
+        } else {
+            // Fallback for browsers that don't support Web Share API
+            const url = window.location.href;
+            const text = '{{ product.title }}';
+            
+            if (navigator.clipboard) {
+                navigator.clipboard.writeText(url).then(() => {
+                    alert('Link copied to clipboard!');
+                });
+            } else {
+                // Fallback for older browsers
+                const textArea = document.createElement('textarea');
+                textArea.value = url;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                alert('Link copied to clipboard!');
+            }
+        }
+    }
+</script>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Single Course Content",
+  "settings": [
+    {
+      "type": "range",
+      "id": "side_card_margin_top",
+      "min": -500,
+      "max": 0,
+      "step": 10,
+      "default": -350,
+      "label": "Side Card Margin Top (px)",
+      "info": "Adjust the negative margin for the side card positioning"
+    },
+    {
+      "type": "header",
+      "content": "Product Meta Fields Required"
+    },
+    {
+      "type": "paragraph",
+      "content": "This section requires the following product meta fields to be set up:"
+    },
+    {
+      "type": "paragraph",
+      "content": "- custom.skills_learn (text): Comma-separated list of skills students will learn"
+    },
+    {
+      "type": "paragraph",
+      "content": "- custom.requirements (text): Course requirements/prerequisites"
+    },
+    {
+      "type": "paragraph",
+      "content": "- custom.sale_timer (text): Sale countdown timer text (optional)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Single Course Content"
+    }
+  ]
+}
+{% endschema %}

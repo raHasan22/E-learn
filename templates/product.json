@@ -66,6 +66,7 @@
         "description",
         "share"
       ],
+      "disabled": true,
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
@@ -82,10 +83,22 @@
         "padding_bottom": 12
       }
     },
+    "rh_single_hero_bKJNYE": {
+      "type": "rh-single-hero",
+      "name": "Single Hero",
+      "settings": {}
+    },
+    "rh_single_course_content_ahMK9y": {
+      "type": "rh-single-course-content",
+      "name": "Single Course Content",
+      "settings": {
+        "side_card_margin_top": -350
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
-        "heading": "You may also like",
+        "heading": "Related Courses",
         "heading_size": "h2",
         "products_to_show": 4,
         "columns_desktop": 4,
@@ -103,6 +116,8 @@
   },
   "order": [
     "main",
+    "rh_single_hero_bKJNYE",
+    "rh_single_course_content_ahMK9y",
     "related-products"
   ]
 }
