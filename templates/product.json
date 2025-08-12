@@ -95,6 +95,64 @@
         "side_card_margin_top": -350
       }
     },
+    "rh_student_review_xwNFJX": {
+      "type": "rh-student-review",
+      "blocks": {
+        "review_r3Ub9y": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+            "author_name": "Orlando Diggs",
+            "author_position": "Position, Company name"
+          }
+        },
+        "review_ecfY8B": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review_text": "The courses here are absolutely amazing! I learned more in 3 months than I did in 2 years of college. The instructors are knowledgeable and the community is supportive.",
+            "author_name": "Sarah Johnson",
+            "author_position": "Frontend Developer, TechCorp"
+          }
+        },
+        "review_kQyrhz": {
+          "type": "review",
+          "settings": {
+            "rating": 5,
+            "review_text": "E-Learn transformed my career! The practical projects and real-world examples helped me land my dream job. Highly recommended for anyone serious about learning.",
+            "author_name": "Michael Chen",
+            "author_position": "Data Scientist, InnovateLab"
+          }
+        }
+      },
+      "block_order": [
+        "review_r3Ub9y",
+        "review_ecfY8B",
+        "review_kQyrhz"
+      ],
+      "name": "Student Reviews Section",
+      "settings": {
+        "background_color": "#ffffff",
+        "padding_top": 50,
+        "padding_bottom": 10,
+        "header_title": "",
+        "header_title_font_size": 50,
+        "header_title_text_align": "center",
+        "header_title_color": "#272727",
+        "card_background_color": "#ffffff",
+        "card_border_color": "#e6faf1",
+        "card_hover_border_color": "#05ce78",
+        "review_text_color": "#272727",
+        "author_name_color": "#272727",
+        "author_position_color": "#666666",
+        "star_active_color": "#05ce78",
+        "star_inactive_color": "#e5e7eb",
+        "pagination_active_color": "#05ce78",
+        "pagination_inactive_color": "#e5e7eb",
+        "card_border_radius": 8
+      }
+    },
     "related-products": {
       "type": "related-products",
       "settings": {
@@ -118,6 +176,7 @@
     "main",
     "rh_single_hero_bKJNYE",
     "rh_single_course_content_ahMK9y",
+    "rh_student_review_xwNFJX",
     "related-products"
   ]
 }

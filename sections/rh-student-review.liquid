@@ -96,60 +96,60 @@
 
 .rh-student-review-section .rh-student-review-header .rh-header-title {
   color: {{ section.settings.header_title_color }};
-  font-size: 50px;
+  font-size: {{ section.settings.header_title_font_size }}px;
   font-family: "Inter", sans-serif;
   font-weight: 700;
   line-height: 120%;
-  text-align: center;
+  text-align: {{ section.settings.header_title_text_align }};
   margin: 0;
 }
 
 /* Responsive breakpoints for review section header title */
 @media screen and (max-width: 1439px) and (min-width: 1200px) {
   .rh-student-review-section .rh-student-review-header .rh-header-title {
-    font-size: 44px;
+    font-size: {{ section.settings.header_title_font_size | times: 0.88 | round }}px;
   }
 }
 
 @media screen and (max-width: 1199px) and (min-width: 1024px) {
   .rh-student-review-section .rh-student-review-header .rh-header-title {
-    font-size: 40px;
+    font-size: {{ section.settings.header_title_font_size | times: 0.8 | round }}px;
   }
 }
 
 @media screen and (max-width: 1023px) and (min-width: 768px) {
   .rh-student-review-section .rh-student-review-header .rh-header-title {
-    font-size: 36px;
+    font-size: {{ section.settings.header_title_font_size | times: 0.72 | round }}px;
   }
 }
 
 @media screen and (max-width: 767px) and (min-width: 600px) {
   .rh-student-review-section .rh-student-review-header .rh-header-title {
-    font-size: 32px;
+    font-size: {{ section.settings.header_title_font_size | times: 0.64 | round }}px;
   }
 }
 
 @media screen and (max-width: 599px) and (min-width: 480px) {
   .rh-student-review-section .rh-student-review-header .rh-header-title {
-    font-size: 28px;
+    font-size: {{ section.settings.header_title_font_size | times: 0.56 | round }}px;
   }
 }
 
 @media screen and (max-width: 479px) and (min-width: 375px) {
   .rh-student-review-section .rh-student-review-header .rh-header-title {
-    font-size: 24px;
+    font-size: {{ section.settings.header_title_font_size | times: 0.48 | round }}px;
   }
 }
 
 @media screen and (max-width: 374px) {
   .rh-student-review-section .rh-student-review-header .rh-header-title {
-    font-size: 22px;
+    font-size: {{ section.settings.header_title_font_size | times: 0.44 | round }}px;
   }
 }
 
 @media screen and (max-width: 319px) {
   .rh-student-review-section .rh-student-review-header .rh-header-title {
-    font-size: 20px;
+    font-size: {{ section.settings.header_title_font_size | times: 0.4 | round }}px;
   }
 }
 
@@ -159,13 +159,22 @@
 
 /* Swiper container styles */
 .review-swiper {
-  padding: 0 0px 60px 0px !important;
+  padding: 0 0px 30px 0px !important;
+  transition: padding-bottom 0.3s ease;
+}
+
+.review-swiper.no-pagination {
+  padding: 0 0px 0px 0px !important;
 }
 
 /* Responsive breakpoints for review swiper padding */
-@media screen and (max-width: 1023px) and (min-width: 768px) {
+/* @media screen and (max-width: 1023px) and (min-width: 768px) {
   .review-swiper {
     padding: 0 0px 50px 0px !important;
+  }
+  
+  .review-swiper.no-pagination {
+    padding: 0 0px 0px 0px !important;
   }
 }
 
@@ -173,11 +182,19 @@
   .review-swiper {
     padding: 0 0px 45px 0px !important;
   }
+  
+  .review-swiper.no-pagination {
+    padding: 0 0px 0px 0px !important;
+  }
 }
 
 @media screen and (max-width: 599px) and (min-width: 480px) {
   .review-swiper {
     padding: 0 0px 40px 0px !important;
+  }
+  
+  .review-swiper.no-pagination {
+    padding: 0 0px 0px 0px !important;
   }
 }
 
@@ -185,11 +202,19 @@
   .review-swiper {
     padding: 0 0px 35px 0px !important;
   }
+  
+  .review-swiper.no-pagination {
+    padding: 0 0px 0px 0px !important;
+  }
 }
 
 @media screen and (max-width: 374px) {
   .review-swiper {
     padding: 0 0px 30px 0px !important;
+  }
+  
+  .review-swiper.no-pagination {
+    padding: 0 0px 0px 0px !important;
   }
 }
 
@@ -197,7 +222,11 @@
   .review-swiper {
     padding: 0 0px 25px 0px !important;
   }
-}
+  
+  .review-swiper.no-pagination {
+    padding: 0 0px 0px 0px !important;
+  }
+} */
 
 /* Swiper pagination */
 .swiper-pagination {
@@ -222,7 +251,6 @@
 /* Ensure proper spacing for review cards container */
 .rh-student-review-section .container_rh .rh-student-review-cards {
   position: relative !important;
-  padding-bottom: 20px !important;
 }
 
 /* Swiper slide styles */
@@ -518,11 +546,13 @@
 
 <div class="rh-student-review-section">
   <div class="container_rh">
-    <div class="rh-student-review-header">
-      <h2 class="rh-header-title">
-        {{ section.settings.header_title | default: "Don't take our word for it! Hear what our students are saying." }}
-      </h2>
-    </div>
+    {% if section.settings.header_title != blank %}
+      <div class="rh-student-review-header">
+        <h2 class="rh-header-title">
+          {{ section.settings.header_title }}
+        </h2>
+      </div>
+    {% endif %}
     <div class="rh-student-review-cards">
       <div class="swiper review-swiper">
         <div class="swiper-wrapper">
@@ -569,6 +599,55 @@
   </div>
 </div>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const reviewSwiper = document.querySelector('.review-swiper');
+  
+  if (reviewSwiper) {
+    // Function to check if pagination is needed
+    function checkPaginationVisibility() {
+      const swiperWrapper = reviewSwiper.querySelector('.swiper-wrapper');
+      const swiperSlides = reviewSwiper.querySelectorAll('.swiper-slide');
+      const pagination = reviewSwiper.querySelector('.swiper-pagination');
+      
+      if (!swiperWrapper || !pagination) return;
+      
+      // Get the total width of all slides
+      let totalSlidesWidth = 0;
+      swiperSlides.forEach(slide => {
+        totalSlidesWidth += slide.offsetWidth;
+      });
+      
+      // Get the container width
+      const containerWidth = swiperWrapper.offsetWidth;
+      
+      // Check if all slides fit in the container (no pagination needed)
+      const needsPagination = totalSlidesWidth > containerWidth;
+      
+      // Add or remove the no-pagination class
+      if (!needsPagination) {
+        reviewSwiper.classList.add('no-pagination');
+      } else {
+        reviewSwiper.classList.remove('no-pagination');
+      }
+    }
+    
+    // Check on load
+    checkPaginationVisibility();
+    
+    // Check on window resize
+    let resizeTimer;
+    window.addEventListener('resize', function() {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(checkPaginationVisibility, 250);
+    });
+    
+    // Check after a short delay to ensure all elements are properly rendered
+    setTimeout(checkPaginationVisibility, 100);
+  }
+});
+</script>
+
 {% schema %}
 {
   "name": "Student Reviews Section",
@@ -596,8 +675,8 @@
     {
       "type": "range",
       "id": "padding_bottom",
-      "min": 20,
-      "max": 150,
+      "min": 10,
+      "max": 100,
       "step": 10,
       "unit": "px",
       "label": "Bottom Padding",
@@ -612,6 +691,36 @@
       "id": "header_title",
       "label": "Header Title",
       "default": "Don't take our word for it! Hear what our students are saying."
+    },
+    {
+      "type": "range",
+      "id": "header_title_font_size",
+      "min": 10,
+      "max": 100,
+      "step": 2,
+      "unit": "px",
+      "label": "Header Title Font Size",
+      "default": 50
+    },
+    {
+      "type": "select",
+      "id": "header_title_text_align",
+      "label": "Header Title Text Align",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
     },
     {
       "type": "header",
