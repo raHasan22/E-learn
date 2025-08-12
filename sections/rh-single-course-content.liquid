@@ -1086,7 +1086,7 @@
 <div class="rh-content-and-side-card">
     <div class="container_rh">
         <div class="content-left">
-            {% assign skills_list = product.metafields.custom.skills_learn | split: ',' %}
+            {% assign skills_list = product.metafields.custom.skills_learn.value %}
             {% if skills_list.size > 0 %}
                 <div class="learn-container">
                     <div class="learn-title">What you'll learn</div>
